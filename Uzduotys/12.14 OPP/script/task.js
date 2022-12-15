@@ -22,7 +22,7 @@
           .slice(1)}`; /// ir pavarde kuri turi viduri varda ir pavarde ir slicinimas ties 1 elementu situ atveju ties pavarde (isvedeme antra varda)
       }
   
-      return name[0].toLocaleUpperCase() + name.slice(1).toLocaleUpperCase(); /// tada grazinamas antras vardas  didzija raide + pavarde ir didziaja raide (isvedeme trecia varda-pavarde)
+      return name[0].toLocaleUpperCase() + name.slice(1); /// tada grazinamas antras vardas  didzija raide + pavarde ir didziaja raide (isvedeme trecia varda-pavarde)
     }
   
     addToTable() { //// idejimas vardo i table 
@@ -60,6 +60,8 @@
   });
   
 
+
+
 //2) Sukurkite HTML formą, kurioje vartotojas galės įrašyti (į input laukelius): car brand, model, mileage, price ir image (url laukelis).
   //2.1) Per Klasę, sukuriamas objektas ir jis atvaizduojamas po forma (CSS'ą rašykite CSS'e) kaip atvaizduota nuotraukoje (./images/cars.PNG).
  // 3.1) Paspaudus ant automobilio bloko - turi alert išmesti kainą ir mileage. (gal su CSS'u gražiai padaryti, kad užėjus ant elemento su pele, atsiranda laukelis nuotraukoje...)
@@ -82,7 +84,7 @@
       createDiv.append(createImage, createText);
       container.append(createDiv);
       createDiv.addEventListener('click', () => {
-        // alert(this.price);
+        // alert(this.price and mileage);
         console.log(this.price,this.mileage);
       })
     }
@@ -98,3 +100,64 @@
     const car = new Car(brand, model, mileage, price, image);
     car.post();
   })
+
+  //3+) (PVP battle) https://edabit.com/challenge/ifDM26p25bqS8EsFu
+  //4+) (Shiritori) https://edabit.com/challenge/6o5tYwwbY2ys7XTm4
+  
+  //5) Sukurti Klasę, kuri kurs paragrafus.
+
+  class Paragraph {
+    constructor(props) {
+      this.props = props;
+      return this.render();
+
+    }
+  
+   render = () => {
+    this.htmlElement = document.createElement('p');
+    this.textElement = document.createTextNode(this.props.tekstas);
+    this.htmlElement.append(this.textElement);
+    
+    if (this.props.atributai) {
+        Object.keys(this.props.atributai).forEach(raktas => {
+            this.htmlElement.setAttribute(raktas, this.props.atributai[raktas]);
+        });
+      }
+      return this.htmlElement;
+    }
+  }
+  
+  
+   let paragrafas1 = new Paragraph({
+    tekstas: "Lorem ipsum dolor sit ame  consectetur adipisicing elit. Quisquam, quod.",
+    atributai: {
+        class: "className  anotherclass",
+        id: "someId",
+        style: "font-size:40px"
+  
+    }
+  
+  });
+  
+  document.querySelector("body").append(paragrafas1);
+  document.querySelector("body").append(
+  
+    new Paragraph({
+        tekstas: "Hello Meow",
+        atributai: {
+            style: "color:blue"
+        }
+    })
+  
+  );
+  
+  document.querySelector("body").append(
+    new Paragraph({
+        tekstas: "BUm badum... O le le "
+  
+    })
+  
+  );
+
+
+ 

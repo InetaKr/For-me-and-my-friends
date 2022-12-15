@@ -1,0 +1,17 @@
+#carForm > input {
+    display: block;
+  }
+#carForm > button {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  img {
+    width: 300px;
+  }

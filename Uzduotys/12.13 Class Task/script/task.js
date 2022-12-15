@@ -219,3 +219,93 @@ e.target.elements.SpointY.value = null;
 });
 
 //4
+
+ //6) Sukurti Klasę, kuri kurs mygtukus.
+
+ class Button {
+
+  constructor(props) {
+
+    this.props = props;
+
+    return this.render();
+
+  }
+
+
+
+  render = () => {
+
+    this.htmlElement = document.createElement('button');
+
+    this.textElement = document.createTextNode(this.props.tekstas);
+
+    this.htmlElement.append(this.textElement);
+
+
+
+    if (this.props.atributai) {
+
+      Object.keys(this.props.atributai).forEach(raktas => {
+
+        this.htmlElement.setAttribute(raktas, this.props.atributai[raktas]);
+
+      });
+
+    }
+
+
+
+    return this.htmlElement;
+
+  }
+
+}
+
+
+
+let mygtukas1 = new Button({
+
+  tekstas:
+
+    "Labai ilgas mygtuko tekstas",
+
+  atributai: {
+
+    class: "klasesVardas darVienaKlase",
+
+    id: "kazkoksId",
+
+    style: "color:orange"
+
+  }
+
+});
+
+document.querySelector("body").append(mygtukas1);
+
+document.querySelector("body").append(
+
+  new Button({
+
+    tekstas: "Push",
+
+    atributai: {
+
+      style: "font-size:20px"
+
+    }
+
+  })
+
+);
+
+document.querySelector("body").append(
+
+  new Button({
+
+    tekstas: "button"
+
+  })
+
+);
