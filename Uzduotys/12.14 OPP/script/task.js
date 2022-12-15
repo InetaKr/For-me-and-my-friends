@@ -89,6 +89,7 @@
       })
     }
   }
+  //pasikeisti
   
   document.querySelector('#carForm').addEventListener('submit', (event) => {
     event.preventDefault();
