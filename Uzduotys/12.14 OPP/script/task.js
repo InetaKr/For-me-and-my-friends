@@ -90,7 +90,7 @@
     }
   }
   //pasikeisti
-  
+
   document.querySelector('#carForm').addEventListener('submit', (event) => {
     event.preventDefault();
     const brand = document.querySelector('#brand').value;
@@ -161,4 +161,3 @@
   );
 
 
- 
