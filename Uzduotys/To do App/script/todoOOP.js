@@ -38,14 +38,14 @@ class ToDo {
         todos.forEach((todo, index) => {                                         
             _todos +=` 
             <div class="todo" id=${index}>
-            <button type="button" class="todoComplete"> <i class="bi ${todo.checked === "true" ? 'bi-check-circle-fill' : 'bi-circle' }"
+            <i class="bi ${todo.checked === "true" ? 'bi-check-circle-fill' : 'bi-circle' }"
             style="color : ${todo.color}"
-            data-action="check"></i></button>
+            data-action="check"></i>
             <div class="task-name">
             <p class="${todo.checked === 'true' ? 'text-decoration-line-through' : 'text-dark'}">${todoInput.value}</p>
             </div>
-            <button type="button" class="todo-edit" > <i class="bi bi-pencil-square"></i> </button>
-            <button type="button"class="todo-delete"> <i class="bi bi-trash"></i></button>
+             <i class="bi bi-pencil-square"></i> 
+            <i class="bi bi-trash"></i>
           </div> `
         });
     
