@@ -76,7 +76,7 @@ function renderTOdo(){
           <i class="bi ${todo.checked ? 'bi-check-circle-fill' : 'bi-circle' }"
           style="color : ${todo.color}"
           data-action="check"></i>
-          <p class="${todo.checked ? 'checked' : '' }" data-action="check">${todo.value}</p>
+          <p class="${todo.checked = true ? 'checked' : '' }" data-action="check">${todo.value}</p>
           <i class="bi bi-pencil-square" data-action="edit"></i> 
           <i class="bi bi-trash" data-action="delete"></i>
         </div> 
