@@ -1,4 +1,4 @@
-/// Form New todo from htm veiksmai
+// Form New todo from htm veiksmai
 
 const form = document.getElementById('todoform');                         //nustatau  form by id
 const todoInput= document.getElementById('newtodo');                      //nustatau to do input by id
@@ -35,12 +35,11 @@ function saveTOdo(){                                                    //funkci
 
     const isEmpty = todoValue === ''                                     /// isEmpty lygi tusciai value tikrinsim ar tuscia imputas
 
-    const isDublicate=                                                  ///tikrinam ar todo list imputas pasikartoja
-    todos.some((todo)=> todo.value.toUpperCase() === todoValue.toUpperCase()); /// callback function tikrina ar irasyto user imput pasikartoja 
+    const isDuplicate = todos.some((todo) => todo.value.toUpperCase() === todoValue.toUpperCase()); 
 
      if(isEmpty){                                                       ///salyga kad tikrunu ar tuscia imputas
         showNotification("Input is empty");                             ///jei tuscia
-     }else if(isDublicate){                                             ///jei kartojasi
+     }else if(isDuplicate){                                             ///jei kartojasi
         showNotification("to do list already exist");
      } else {                                                           ///jei tinkama
         if(EditedTodo >= 0) {                                           ///checking if user editing the todo than need to update the edit todo 
@@ -56,7 +55,7 @@ function saveTOdo(){                                                    //funkci
             color: '#' + Math.floor(Math.random() * 16777215).toString(16)   //3.random color
         });                                                                  ///pushina todo  i todos tuscia array
         
-        todoInput.value=""                                                   ///input clear
+        todoInput.value="";                                                   ///input clear
     } 
 }}
 
@@ -71,17 +70,16 @@ function renderTOdo(){
     todolistEl.innerHTML = "";
     //render to do
     todos.forEach((todo, index) => {                                         //callback function, kiekvienam todos idedu innerhtml/add color and data-action
-        todolistEl.innerHTML += ` 
-        <div class="todo" id=${index}>
-          <i class="bi ${todo.checked ? 'bi-check-circle-fill' : 'bi-circle' }"
+        todolistEl.innerHTML += `<div class="todo" id=${index}>
+        <i 
+          class="bi ${todo.checked ? 'bi-check-circle-fill' : 'bi-circle'}"
           style="color : ${todo.color}"
-          data-action="check"></i>
-          <p class="${todo.checked = true ? 'checked' : '' }" data-action="check">${todo.value}</p>
-          <i class="bi bi-pencil-square" data-action="edit"></i> 
-          <i class="bi bi-trash" data-action="delete"></i>
-        </div> 
-        
-        `
+          data-action="check"
+        ></i>
+        <p class="${todo.checked ? 'checked' : ''}" data-action="check">${todo.value}</p>
+        <i class="bi bi-pencil-square" data-action="edit"></i>
+        <i class="bi bi-trash" data-action="delete"></i>
+      </div>`
 
     })
 }
