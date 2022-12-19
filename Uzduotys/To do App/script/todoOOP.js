@@ -1,7 +1,4 @@
-window.onload = () => {
-    tasks.forEach(item => item.state = "show");
-    Task.display();
-}
+
 
 let tasks = [];
 const getTasks = localStorage.getItem('tasks');
@@ -41,8 +38,7 @@ class Task {
     // create task
     static create(task) {
         const generateRandomId = Math.floor(Math.random() * 99999);
-        const generateRandomColor = 
-        tasks.push({ id: generateRandomId, name: task, completed: 'false', state: 'show', color:'#' + Math.floor(Math.random() * 16777215).toString(16) });
+        tasks.push({ id: generateRandomId, name: task, completed: 'false', state: 'show' });
         this.display();
     }
 
@@ -110,10 +106,8 @@ class Task {
              }
          });
         this.display();
-    }
-
-    
-    }
+    } 
+}
 
 
 // Create Btn
@@ -150,7 +144,7 @@ function showError(error_place, error_message) {
                 ${error_message}
             </div>
         `;
-        setTimeout(() => error_container.innerHTML = '', 3000);
+        setTimeout(() => error_container.innerHTML = '', 2000);
     }
 }
 
