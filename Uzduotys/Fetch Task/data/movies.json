@@ -1,0 +1,27 @@
+{
+    "movies": [
+      {
+        "title": "Thor: The Dark World",
+        "poster": "https://www.avforums.com/styles/avf/editorial/block//3f543eaa16d530c52d9ad0adf0e46969_3x3.jpg",
+        "length": 111,
+        "actors": ["Tom Hiddleston", "Chris Hemsworth"],
+        "description":"In ancient times, the gods of Asgard fought and won a war against an evil race known as the Dark Elves. The survivors were neutralized, and their ultimate weapon -- the Aether -- was buried in a secret location. Hundreds of years later, Jane Foster  finds the Aether and becomes its host, forcing Thor  to bring her to Asgard before Dark Elf Malekith captures her and uses the weapon to destroy the Nine Realms -- including Earth."
+      },
+      {
+        "title": "Avatar: The Way of Water",
+        "poster": "https://i.ytimg.com/vi/YB-x-uk9L4s/maxresdefault.jpg",
+        "length": 192,
+        "actors": ["Sam Worthington", "Zoe Saldana"],
+        "description":"Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure."
+
+      },
+      {
+        "title": "Doctor Strange In The Multiverse Of Madness",
+        "poster":"https://cdn.mos.cms.futurecdn.net/NJXQ8h3mUd9mhsh2m8xpba.jpg",
+        "length": 126,
+        "actors": ["Benedict Cumberbatch", "Elizabeth Olsen"],
+        "description":"Doctor Strange in the Multiverse of Madness, the MCU unlocks the Multiverse and pushes its boundaries further than ever before. Journey into the unknown with Doctor Strange, who, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary."
+      }
+    ]
+  }
+  
