@@ -124,9 +124,7 @@ function getMealList() {
   
   
 //#region get recipe of the meal and add modal(funkcijos)
-
-// get recipe of the meal
-function getMealRecipe(e){
+  function getMealRecipe(e){
     e.preventDefault();
     if(e.target.classList.contains('recipe-btn')){
         let mealItem = e.target.parentElement.parentElement;
@@ -135,14 +133,16 @@ function getMealRecipe(e){
         .then(data => mealRecipeModal(data.meals));
     }
 }
-
-// create a modal
+  
+  // create a modal//// change into append 
 function mealRecipeModal(meal){
     console.log(meal);
     meal = meal[0];
     let html = `
         <h2 class = "recipe-title">${meal.strMeal}</h2>
-        <p class = "recipe-category">${meal.strCategory}</p>
+        <p class = "recipe-ingredients">${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, 
+        ${meal.strIngredient4}, ${meal.strIngredient5}, ${meal.strIngredient6}, ${meal.strIngredient7}  
+        </p>
         <div class = "recipe-instruct">
             <h3>Instructions:</h3>
             <p>${meal.strInstructions}</p>
@@ -154,17 +154,10 @@ function mealRecipeModal(meal){
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
+//#endregion
 
 
-
-
-
-
-
-
-
-/* su append bandziau
-function getMealRecipe(e){
+/*function getMealRecipe(e){
     e.preventDefault();
     if(e.target.classList.contains('recipe-btn')){
       let mealItem = e.target.parentElement.parentElement;
@@ -174,44 +167,42 @@ function getMealRecipe(e){
     }
   }
   
+  // create a modal//// change into append 
   function mealRecipeModal(meal){
     console.log(meal);
     meal = meal[0];
   
-    // Create elements
-    let title = document.createElement('h2');
-    let category = document.createElement('p');
+  
+  
+    let RecipeTitle= document.createElement('h2')
+    RecipeTitle.classList.add('recipe-title')
+    RecipeTitle.innerHTML= `${meal.strMeal}`
+    mealDetailsContent.append(RecipeTitle)
+  
+    let ingredientsList = document.createElement('p');
+    ingredientsList.classList.add('recipe-ingredients');
+    ingredientsList.innerText = `${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, 
+                                ${meal.strIngredient4}, ${meal.strIngredient5}, ${meal.strIngredient6}, ${meal.strIngredient7}`;
+    mealDetailsContent.append(ingredientsList);
+  
     let instructions = document.createElement('div');
-    let instructionsTitle = document.createElement('h3');
-    let instructionsText = document.createElement('p');
-    let link = document.createElement('div');
-    let linkElem = document.createElement('a');
-  
-    // Set element text and attribute values
-    title.textContent = meal.strMeal;
-    category.textContent = meal.strCategory;
-    instructionsTitle.textContent = 'Instructions:';
-    instructionsText.textContent = meal.strInstructions;
-    linkElem.href = meal.strYoutube;
-    linkElem.target = '_blank';
-    linkElem.textContent = 'Watch Video';
-  
-    // Set element classes
-    title.classList.add('recipe-title');
-    category.classList.add('recipe-category');
     instructions.classList.add('recipe-instruct');
-    link.classList.add('recipe-link');
+    instructions.innerHTML = `
+        <h3>Instructions:</h3>
+        <p>${meal.strInstructions}</p>
+    `;
+    mealDetailsContent.append(instructions);
   
-    // Append elements
-    instructions.appendChild(instructionsTitle);
-    instructions.appendChild(instructionsText);
-    link.appendChild(linkElem);
-    mealDetailsContent.appendChild(title);
-    mealDetailsContent.appendChild(category);
-    mealDetailsContent.appendChild(instructions);
-    mealDetailsContent.appendChild(link);
+    let videoLink = document.createElement('a');
+    videoLink.href = meal.strYoutube;
+    videoLink.target = "_blank";
+    videoLink.innerText = "Watch Video";
+    videoLink.classList.add('recipe-link');
+    mealDetailsContent.append(videoLink);
   
-    // Show modal
+    
+    
+    
     mealDetailsContent.parentElement.classList.add('showRecipe');
-  }*/
-  //#endregion
+  }
+  */

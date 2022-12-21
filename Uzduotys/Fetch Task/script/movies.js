@@ -112,3 +112,42 @@ function getMealRecipe(e){
   }
 }
 
+// create a modal//// change into append 
+function mealRecipeModal(meal){
+  console.log(meal);
+  meal = meal[0];
+
+
+
+  let RecipeTitle= document.createElement('h2')
+  RecipeTitle.classList.add('recipe-title')
+  RecipeTitle.innerHTML= `${meal.strMeal}`
+  mealDetailsContent.append(RecipeTitle)
+
+  let ingredientsList = document.createElement('p');
+  ingredientsList.classList.add('recipe-ingredients');
+  ingredientsList.innerText = `${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, 
+                              ${meal.strIngredient4}, ${meal.strIngredient5}, ${meal.strIngredient6}, ${meal.strIngredient7}`;
+  mealDetailsContent.append(ingredientsList);
+
+  let instructions = document.createElement('div');
+  instructions.classList.add('recipe-instruct');
+  instructions.innerHTML = `
+      <h3>Instructions:</h3>
+      <p>${meal.strInstructions}</p>
+  `;
+  mealDetailsContent.append(instructions);
+
+  let videoLink = document.createElement('a');
+  videoLink.href = meal.strYoutube;
+  videoLink.target = "_blank";
+  videoLink.innerText = "Watch Video";
+  videoLink.classList.add('recipe-link');
+  mealDetailsContent.append(videoLink);
+
+  
+  
+  
+  mealDetailsContent.parentElement.classList.add('showRecipe');
+}
+//#endregion
