@@ -6,7 +6,7 @@ mealSearch.classList.add('meal-search');
 
 const mealSearchTitle = document.createElement('h2');
 mealSearchTitle.classList.add('title');
-mealSearchTitle.textContent = 'Find Meals For Your Ingredients';
+mealSearchTitle.textContent = 'Find Recipe By The Ingredients';
 mealSearch.appendChild(mealSearchTitle);
 
 const mealSearchBox = document.createElement('div');
@@ -104,7 +104,7 @@ function getMealList() {
                 const a = document.createElement('a');
                 a.href = '#';
                 a.classList.add('recipe-btn');
-                a.textContent = 'More Info..';
+                a.textContent = 'Get More Info';
 
                 mealName.append(h3, a);
                 mealItem.append(mealImg, mealName);
@@ -134,7 +134,7 @@ function getMealList() {
     }
 }
   
-  // create a modal//// change into append 
+ // create a modal//// change into append 
 function mealRecipeModal(meal){
     console.log(meal);
     meal = meal[0];
@@ -206,3 +206,4 @@ function mealRecipeModal(meal){
     mealDetailsContent.parentElement.classList.add('showRecipe');
   }
   */
+  
