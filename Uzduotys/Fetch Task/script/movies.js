@@ -102,6 +102,54 @@ fetch('./data/movies.json')
 
 })*/
 
+function getMealRecipe(e){
+  e.preventDefault();
+  if(e.target.classList.contains('recipe-btn')){
+    let mealItem = e.target.parentElement.parentElement;
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+    .then(response => response.json())
+    .then(data => mealRecipeModal(data.meals));
+  }
+}
 
+function mealRecipeModal(meal){
+  console.log(meal);
+  meal = meal[0];
 
-  
+  // Create elements
+  let title = document.createElement('h2');
+  let category = document.createElement('p');
+  let instructions = document.createElement('div');
+  let instructionsTitle = document.createElement('h3');
+  let instructionsText = document.createElement('p');
+  let link = document.createElement('div');
+  let linkElem = document.createElement('a');
+
+  // Set element text and attribute values
+  title.textContent = meal.strMeal;
+  category.textContent = meal.strCategory;
+  instructionsTitle.textContent = 'Instructions:';
+  instructionsText.textContent = meal.strInstructions;
+  linkElem.href = meal.strYoutube;
+  linkElem.target = '_blank';
+  linkElem.textContent = 'Watch Video';
+
+  // Set element classes
+  title.classList.add('recipe-title');
+  category.classList.add('recipe-category');
+  instructions.classList.add('recipe-instruct');
+  link.classList.add('recipe-link');
+
+  // Append elements
+  instructions.appendChild(instructionsTitle);
+  instructions.appendChild(instructionsText);
+  link.appendChild(linkElem);
+  mealDetailsContent.appendChild(title);
+  mealDetailsContent.appendChild(category);
+  mealDetailsContent.appendChild(instructions);
+  mealDetailsContent.appendChild(link);
+
+  // Show modal
+  mealDetailsContent.parentElement.classList.add('showRecipe');
+}
+//#endregion
