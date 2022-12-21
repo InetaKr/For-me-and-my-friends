@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+const allContent = document.querySelector('.allContent');
 //#region create all needed elements JS
 
 const mealSearch = document.createElement('div');
@@ -15,15 +15,15 @@ mealSearch.appendChild(mealSearchBox);
 
 const searchInput = document.createElement('input');
 searchInput.type = 'text';
-searchInput.classList.add('search-control');
+searchInput.classList.add('search-field');
 searchInput.placeholder = 'Enter an ingredient';
 searchInput.id = 'search-input';
 mealSearchBox.appendChild(searchInput);
 
 const searchBtn = document.createElement('button');
 searchBtn.type = 'submit';
-searchBtn.classList.add('search-btn', 'btn');
-searchBtn.id = 'search-btn';
+searchBtn.classList.add('searchbtn');
+searchBtn.id = 'searchbtn';
 mealSearchBox.appendChild(searchBtn);
 
 const searchBtnIcon = document.createElement('i');
@@ -47,36 +47,36 @@ mealResult.appendChild(mealList);
 const mealDetails = document.createElement('div');
 mealDetails.classList.add('meal-details');
 
-const recipeCloseBtn = document.createElement('button');
-recipeCloseBtn.type = 'button';
-recipeCloseBtn.classList.add('btn', 'recipe-close-btn');
-recipeCloseBtn.id = 'recipe-close-btn';
-mealDetails.appendChild(recipeCloseBtn);
+const CloseBtn = document.createElement('button');
+CloseBtn.type = 'button';
+CloseBtn.classList.add('btn', 'close-btn');
+CloseBtn.id = 'close-btn';
+mealDetails.appendChild(CloseBtn);
 
-const recipeCloseBtnIcon = document.createElement('i');
-recipeCloseBtnIcon.classList.add('fas', 'fa-times');
-recipeCloseBtn.appendChild(recipeCloseBtnIcon);
+const CloseBtnIcon = document.createElement('i');
+CloseBtnIcon.classList.add('fas', 'fa-times');
+CloseBtn.appendChild(CloseBtnIcon);
 
-const mealDetailsContent = document.createElement('div');
-mealDetailsContent.classList.add('meal-details-content');
-mealDetails.appendChild(mealDetailsContent);
+const DetailsContent = document.createElement('div');
+DetailsContent.classList.add('meal-details-content');
+mealDetails.appendChild(DetailsContent);
 
 // append all elements to the container
-container.appendChild(mealSearch);
-container.appendChild(mealResult);
-container.appendChild(mealDetails);
+allContent.appendChild(mealSearch);
+allContent.appendChild(mealResult);
+allContent.appendChild(mealDetails);
  
 //#endregion
 
-searchBtn.addEventListener('click', getMealList);
-mealList.addEventListener('click', getMealRecipe);
-recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
+searchBtn.addEventListener('click', getList);
+mealList.addEventListener('click', getRecipe);
+CloseBtn.addEventListener('click', () => {
+    DetailsContent.parentElement.classList.remove('showRecipe');
 });
 
 //#region get meal list that matches with the ingredients (funkcija)
-function getMealList() {
-    let searchInputTxt = document.getElementById('search-input').value.trim();
+function getList() {
+    const searchInputTxt = document.getElementById('search-input').value.trim();
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
       .then(response => response.json())
       .then(data => {
@@ -114,7 +114,7 @@ function getMealList() {
             mealList.classList.remove('notFound');
         } else{
             const p = document.createElement('p');
-            p.textContent = "Sorry, we didn't find any meal!";
+            p.textContent = "Sorry, we do not have recipe with this ingredient";
             mealList.append(p);
             mealList.classList.add('notFound');
         }
@@ -124,40 +124,7 @@ function getMealList() {
   
   
 //#region get recipe of the meal and add modal(funkcijos)
-  function getMealRecipe(e){
-    e.preventDefault();
-    if(e.target.classList.contains('recipe-btn')){
-        let mealItem = e.target.parentElement.parentElement;
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
-        .then(response => response.json())
-        .then(data => mealRecipeModal(data.meals));
-    }
-}
-  
- // create a modal//// change into append 
-function mealRecipeModal(meal){
-    console.log(meal);
-    meal = meal[0];
-    let html = `
-        <h2 class = "recipe-title">${meal.strMeal}</h2>
-        <p class = "recipe-ingredients">${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, 
-        ${meal.strIngredient4}, ${meal.strIngredient5}, ${meal.strIngredient6}, ${meal.strIngredient7}  
-        </p>
-        <div class = "recipe-instruct">
-            <h3>Instructions:</h3>
-            <p>${meal.strInstructions}</p>
-        </div>
-        <div class = "recipe-link">
-            <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
-        </div>
-    `;
-    mealDetailsContent.innerHTML = html;
-    mealDetailsContent.parentElement.classList.add('showRecipe');
-}
-//#endregion
-
-
-/*function getMealRecipe(e){
+function getRecipe(e){
     e.preventDefault();
     if(e.target.classList.contains('recipe-btn')){
       let mealItem = e.target.parentElement.parentElement;
@@ -172,38 +139,33 @@ function mealRecipeModal(meal){
     console.log(meal);
     meal = meal[0];
   
-  
-  
-    let RecipeTitle= document.createElement('h2')
+    const RecipeTitle= document.createElement('h2')
     RecipeTitle.classList.add('recipe-title')
     RecipeTitle.innerHTML= `${meal.strMeal}`
-    mealDetailsContent.append(RecipeTitle)
+    DetailsContent.append(RecipeTitle)
   
-    let ingredientsList = document.createElement('p');
+    const ingredientsList = document.createElement('p');
     ingredientsList.classList.add('recipe-ingredients');
     ingredientsList.innerText = `${meal.strIngredient1}, ${meal.strIngredient2}, ${meal.strIngredient3}, 
                                 ${meal.strIngredient4}, ${meal.strIngredient5}, ${meal.strIngredient6}, ${meal.strIngredient7}`;
-    mealDetailsContent.append(ingredientsList);
+    DetailsContent.append(ingredientsList);
   
-    let instructions = document.createElement('div');
+    const instructions = document.createElement('div');
     instructions.classList.add('recipe-instruct');
     instructions.innerHTML = `
         <h3>Instructions:</h3>
         <p>${meal.strInstructions}</p>
     `;
-    mealDetailsContent.append(instructions);
+    DetailsContent.append(instructions);
   
-    let videoLink = document.createElement('a');
+    const videoLink = document.createElement('a');
     videoLink.href = meal.strYoutube;
     videoLink.target = "_blank";
     videoLink.innerText = "Watch Video";
     videoLink.classList.add('recipe-link');
-    mealDetailsContent.append(videoLink);
-  
-    
-    
-    
-    mealDetailsContent.parentElement.classList.add('showRecipe');
+    DetailsContent.append(videoLink);
+
+    DetailsContent.parentElement.classList.add('showRecipe');
   }
-  */
+  //#endregion
   
