@@ -36,7 +36,7 @@ mealResult.classList.add('meal-result');
 
 const mealResultTitle = document.createElement('h2');
 mealResultTitle.classList.add('title');
-mealResultTitle.textContent = 'Your Search Results:';
+mealResultTitle.textContent = 'Meals You Can Make:';
 mealResult.appendChild(mealResultTitle);
 
 const mealList = document.createElement('div');
@@ -151,7 +151,7 @@ function getRecipe(e){
     DetailsContent.append(ingredientsList);
   
     const instructions = document.createElement('div');
-    instructions.classList.add('recipe-instruct');
+    instructions.classList.add('recipe-instructions');
     instructions.innerHTML = `
         <h3>Instructions:</h3>
         <p>${meal.strInstructions}</p>

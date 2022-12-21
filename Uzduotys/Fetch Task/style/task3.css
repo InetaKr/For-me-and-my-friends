@@ -31,6 +31,7 @@ body{
     font-size: 2.5rem;
     margin-bottom: 1rem;
     margin-top: 2.5rem;
+    color: #620449;
     
 }
 
@@ -106,7 +107,7 @@ body{
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
     overflow: hidden;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 21px -12px #620449(0, 0, 0, 1);
     margin: 2rem 0;
 }
 
@@ -114,7 +115,7 @@ body{
     transform: rotateY(25deg);
     transform: rotateY(0deg) scale(1.25);
    
-    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 25px 40px #620449(0,0,0,0.5);
   }
  
 .meal-img img{
@@ -127,6 +128,7 @@ body{
 }
 .meal-name h3{
     font-size: 1.4rem;
+    color: #620449;
 }
 .recipe-btn{
     text-align: center;
@@ -164,7 +166,7 @@ body{
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    color: #fff;
+    color: white;
     background: var(--tenne-tawny);
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
@@ -198,7 +200,7 @@ body{
 .meal-details-content{
     margin: 2rem;
 }
-.meal-details-content p:not(.recipe-category){
+.meal-details-content p:not(.recipe-ingredients){
     padding: 1rem 0;
 }
 .close-btn{
@@ -248,7 +250,7 @@ body{
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
 }
-.recipe-instruct{
+.recipe-instructions{
     padding: 1rem 0;
 }
 .recipe-meal-img img{
