@@ -7,7 +7,9 @@
     align-items: center;
     gap: 20px;
     border-radius: 20px;
-    
+    margin-left: 600px;
+    margin-top: 40px;
+
 }
 
 .form{
@@ -43,6 +45,7 @@
 
 *{
     box-sizing: border-box;
+    
 }
 body {
     font-family: Arial, serif;

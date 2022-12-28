@@ -161,39 +161,6 @@ const getPets = () => {
 };
 
 
-/*const addPetsForm = document.querySelector('#addPetsForm');
-
-const getPets = () => {
-  fetch(url, { method: 'GET' })
-    .then((response) => response.json())
-    .then((data) => {
-      patientsDiv.innerHTML = '';
-      data.forEach((pet) => {
-        patientsDiv.innerHTML += `
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="animal-card">
-              <h3>${pet.petname}</h3>
-              <div>
-                <img src="${pet.image}">
-                <p class="italic">"${pet.facts} " </p>
-                <ul>
-                  <li><span class="bold">Scientific name</span>: ${pet.scientificName}</li>
-                  <li><span class="bold">Clasification</span>: ${pet.clasification}</li>
-                  <li><span class="bold">Gender</span>: ${pet.gender}</li>
-                  <li><span class="bold">Age</span>: ${pet.age}</li>
-                </ul>
-                <p>${pet.medicalHistory} </p>
-                <button class="btn btn-danger" onclick="deletePatient(${pet.id})">Delete</button>
-                <button class="btn btn-warning" onclick="editPatient(${pet.id})">Edit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        `;
-      });
-    });
-};*/
 
 const addPet = (e) => {
   e.preventDefault();
@@ -232,6 +199,8 @@ const deletePatient = (id) => {
       getPets();
     });
 };
+
+
 const editPatient = (id) => {
   fetch(`${url}/${id}`)
     .then((response) => response.json())
@@ -449,95 +418,33 @@ const editPatient = (id) => {
      });
  };
 
-/*const editPatient = (id) => {
-  fetch(`${url}/${id}`)
-    .then((response) => response.json())
-    .then((data) => {
-      petname.value = data.petname;
-      clasification.value= data.clasification;
-      scientificName.value=data.scientificName;
-      gender.value=data.gender;
-      facts.value=data.facts;
-      age.value=data.age;
-      medicalHistory.value=data.medicalHistory;
-      image.value=data.image;
-      
-      addPetsForm.innerHTML = `
-      <div class="form
-                <label for="petname"> Pet Name</label>
-                <input type="text" name="petname" id="petname" class="form-control" value="${data.petname}" required>
-              </div>
-      <div class="form
-                <label for="clasification"> Clasification</label>
-                <input type="text"  name="clasification" id="clasification" class="form-control" value="${data.clasification}" required>
-              </div>
-      <div class="form
-                <label for="scientificName"> scientific Name</label>
-                <input type="text" name="scientificName" id="scientificName" class="form-control" value="${data.scientificName}" required>
-              </div>
-      <div class="form
-                <label for="gender"> gender</label>
-                <input type="select" name="gender" id="gender" class="form-control" value="${data.gender}" required>
-              </div>
-             
-              <div class="form
-                <label for="age">Age</label>
-                <input type="number" name="age" id="age" class="form-control" value="${data.age}" required>
-              </div>
-              <div class="form
-                
-                <label for="facts">Facts</label>
-                <input type="text" name="facts" id="facts" class="form-control" value="${data.facts}" required>
-              </div>
-              <div class="form
-                <label for="medicalHistory">Medical History</label>
-                <input type="text" name="medicalHistory" id="medicalHistory" class="form-control" value="${data.medicalHistory}" required>
-              </div>
-              <div class="form
-                <label for="image>Image</label>
-                <input type="text" name="image" id="image" class="form-control" value="${data.image}" required>
-              </div>
-              <button type="submit" class="btnAddPet" onclick="updatePet(${data.id})">Update Pet</button>
-            `;
-    });
-};*/
 
-const updatePet = (id) => {
-  const pet = {
-      petname:petname.value,
-      clasification:clasification.value,
-      scientificName:scientificName.value,
-      gender:gender.value,
-      age :age.value,
-      facts:facts.value,
-      medicalHistory:medicalHistory.value,
-      image:image.value,
-  };
-  fetch(`${url}/${id}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(pet),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      updateCard(data);
-    });
-};
 
-const updateCard = (pet) => {
-  const card = document.querySelector(`[data-id="${pet.id}"]`);
-  if (card) {
-    card.querySelector('h3').textContent = pet.petname;
-    card.querySelector('img').src = pet.image;
-    card.querySelector('.italic').textContent = `"${pet.facts}"`;
-    card.querySelector('[data-label="scientificName"]').textContent = pet.scientificName;
-    card.querySelector('[data-label="classification"]').textContent = pet.classification;
-    card.querySelector('[data-label="gender"]').textContent = pet.gender;
-    card.querySelector('[data-label="age"]').textContent = pet.age;
-    card.querySelector('p:last-of-type').textContent = pet.medicalHistory;
+ const updatePet = async (id) => {
+  try {
+    const pet = {
+      petname: petname.value,
+      clasification: clasification.value,
+      scientificName: scientificName.value,
+      gender: gender.value,
+      age: age.value,
+      facts: facts.value,
+      medicalHistory: medicalHistory.value,
+      image: image.value,
+    };
+    await fetch(`${url}/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(pet),
+    }) .then(res => res.json())
+    .then(data => updateCard(data));
+    // const data = await response.json();
+    // console.log(data);
+    
+  } catch (error) {
+    console.error(error);
   }
 };
 
