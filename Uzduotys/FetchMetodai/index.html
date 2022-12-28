@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+           <h1>fetch metodai</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <form id="addApartmentForm">
+              <div class="form-group">
+                <label for="city">City</label><br>
+                <select name="city" id="city" required>
+                  <option value="Vilnius">Vilnius</option>
+                  <option value="Kaunas">Kaunas</option>
+                  <option value="Klaipėda">Klaipėda</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description"
+                  class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="image">Image</label>
+                <input type="text" name="image" id="image" class="form-control"
+                  required>
+              </div>
+              <button type="submit" class="btn btn-primary">Add apartment</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="apartments"></div>
+          </div>
+        </div>
+</body>
+</html>
