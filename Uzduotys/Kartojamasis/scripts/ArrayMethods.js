@@ -1,3 +1,5 @@
+
+
 let stringArray =['Labas', 'ate', 'Meow', 'nesusipratelis', 'Konfederacija', "dream", "as", "snaige" ];
 let numberArray = [3,567,78,69,123,4,7,2020202];
 let mixedArray = ['Labas', 'meow', 4,69, true, 'nesusipratelis', 'sleep', false, 567, 23435];
