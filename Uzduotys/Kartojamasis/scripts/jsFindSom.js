@@ -317,12 +317,60 @@ function hasUppercaseElement(array) {
   }
   
 //17+) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, bent vienas elementas yra mažesnis už A, bet didesnis už B.(A ir B - funkcijos parametras skaičius).
+function hasElementBetweenAAndB(array, A, B) {
+    return array.some(element => element > A && element < B);
+  }
+  
 //18++) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, bent vienas elementas prasideda didžiąja arba mažąja raide (true arba false / "d" arba "s" kaip jau nuspręsit) ir yra ilgenis už A, bet trumpesnis už B (A ir B - funkcijos parametras skaičius).
+
+function hasElementWithCaseAndLength(array, caseType, A, B) {
+    return array.some(element => ((caseType === "d" || caseType === true) && element[0] === element[0].toUpperCase()) || ((caseType === "s" || caseType === false) && element[0] === element[0].toLowerCase()) && element.length > A && element.length < B);
+  }
+  
 //19) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, visi elementai yra didenis už A (A - funkcijos parametras skaičius).
+function allElementsLargerThanA(array, A) {
+    return array.every(element => element > A);
+  }
+  
 //20) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, visi elementai yra mažesnis už A (A - funkcijos parametras skaičius).
+function allElementsSmallerThanA(array, A) {
+    return array.every(element => element < A);
+  }
+  
 //21) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, visi elementai prasideda mažąja raide.
+function allElementsStartWithLowercase(array) {
+    return array.every(element => element[0] === element[0].toLowerCase());
+  }
+  
+
 //22) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, visi elementai prasideda didžiąja raide.
+function allElementsStartWithUppercase(array) {
+    return array.every(element => element[0] === element[0].toUpperCase());
+  }
+  
 //23+) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, visi elementai yra mažesnis už A, bet didesnis už B.(A ir B - funkcijos parametras skaičius).
+function allElementsBetweenAAndB(array, A, B) {
+    return array.every(element => element > A && element < B);
+  }
+  
 //24++) Parašyti funkciją, kuri patikrina ar iš jai duoto masyvo, visi elementai prasideda didžiąja arba mažąja raide (true arba false / "d" arba "s" kaip jau nuspręsit) ir yra ilgenis už A, bet trumpesnis už B (A ir B - funkcijos parametras skaičius).   
+function allElementsStartWithCaseAndLengthBetweenAAndB(array, caseType, A, B) {
+    return array.every(element => {
+      if (caseType === "d") {
+        return element[0] === element[0].toUpperCase() && element.length > A && element.length < B;
+      } else if (caseType === "s") {
+        return element[0] === element[0].toLowerCase() && element.length > A && element.length < B;
+      }
+    });
+  }
+  
 //25) Parašyti funkciją, kuri patikrina ar jai duotame masyve yra kažkokia nurodyta reikšmė.
+function includesValue(array, value) {
+    return array.includes(value);
+  }
+  
 //26) Parašyti funkciją, kuri patikrina ar jai duotame masyve yra kažkokia nurodyta reikšmė, nuo pasirinkto indekso.
+function includesValueFromIndex(array, value, index) {
+    return array.includes(value, index);
+  }
+  
