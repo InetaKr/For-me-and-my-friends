@@ -37,11 +37,11 @@ function greaterThanA(numbers, A) {
   
   //1.4) Naudodami ką norite (lambda, metodus, kitų funkcijų kvietimus jūsų funkcijose ir pns.) perrašykite 1.1, 1.2 ir 1.3 užduotis.
   
-  const greaterThanA = (numbers, A) => numbers.filter(num => num > A);
+  const greaterThanA2 = (numbers, A) => numbers.filter(num => num > A);
   
-  const betweenAandB = (numbers, A, B) => numbers.filter(num => num > A && num < B);
+  const betweenAandB2 = (numbers, A, B) => numbers.filter(num => num > A && num < B);
   
-  const betweenAandBwithParity = (numbers, A, B, parity) =>
+  const betweenAandBwithParity1 = (numbers, A, B, parity) =>
     numbers.filter(num => num > A && num < B && [0, 1].includes(num % 2) === parity);
   
   
@@ -83,11 +83,11 @@ function greaterThanA(numbers, A) {
   
   //2.4) Naudodami ką norite (lambda, metodus, kitų funkcijų kvietimus jūsų funkcijose ir pns.) perrašykite 2.1, 2.2 ir 2.3 užduotis.  
   
-  const longerThanA = (words, A) => words.filter(word => word.length > A);
+  const longerThanA1 = (words, A) => words.filter(word => word.length > A);
   
-  const betweenAandB = (words, A, B) => words.filter(word => word.length > A && word.length < B);
+  const betweenAandB1 = (words, A, B) => words.filter(word => word.length > A && word.length < B);
   
-  const betweenAandBwithCase = (words, A, B, isUppercase) =>
+  const betweenAandBwithCase1 = (words, A, B, isUppercase) =>
     words.filter(word => word.length > A && word.length < B && [true, false].includes(word[0] === word[0].toUpperCase()) === isUppercase);
   
   //3) Parašykite funkciją, kuri iš mišraus masyvo atrinktų tik number arba tik string kintamuosiuos (true/false).
