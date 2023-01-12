@@ -1,0 +1,126 @@
+body{
+  background-color: rgb(47, 46, 46);
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header{
+  background-image: url('https://miro.medium.com/max/1400/1*NcPxtNCUegVpoMZ3kbVh8Q.jpeg');
+  height: 100vh;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+}
+
+.headerContent h1{
+  text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    opacity: 0.7;
+    padding-top: 200px;   
+}
+.headerContent p{
+  text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    opacity: 0.7;
+      
+}
+
+.headerContent span{
+  color: red;
+}
+
+.headerContent button{
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  width: 150px;
+    height: 50px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+    margin-left: 220px;  
+}
+
+.headerContent button:hover{
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  scale: 1.2;
+}
+
+#portfolio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.portfolioContent h1{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  
+}
+.portfolioContent p{
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-top: 20px;
+}
+
+.portfolioContent span p{
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: red
+  
+}
+
+#cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.card  {
+  width: 30%;
+  background-color: black;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.card:hover{
+  opacity: 1;
+  cursor: pointer;
+  box-shadow:  0 8px 10px 0 rgba(222, 39, 39, 0.2), 0 8px 22px 0 rgba(210, 46, 46, 0.19);
+  scale: 1.1;
+}
+
+.card p {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+
+}
+
+.card img {
+  width: 100%;
+  height: 320px
+}
