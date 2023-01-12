@@ -1,16 +1,18 @@
-import React from 'react';
 
-const NavBar = ({ markedArticles }) => {
-  return (
-    <div className="navbar">
-      <div className="logo">Logo</div>
-      <div className="user-info">
-        <img src="user-icon.png" alt="user icon" />
-        <span>User Name</span>
-        <span>Marked Articles: {markedArticles}</span>
+
+const NavBar = ({ markedArticles }) => (
+  <nav>
+    <div className="logo">Example Site</div>
+    <div className="user-info">
+      <div className="user-name">John Doe</div>
+      <div className="bookmarked-articles">
+        <img src="" alt="" />
+        <span>{markedArticles}</span>
       </div>
     </div>
-  );
-};
+  </nav>
+);
 
-export default NavBar
+export default NavBar;
+
+
