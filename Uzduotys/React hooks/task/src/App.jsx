@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
 import Article from './components/Articles';
+import "./App.css";
 
 const App = () => {
   // State to keep track of the number of marked articles
@@ -17,7 +18,7 @@ const App = () => {
       paragraphs: [
          ' I went to this girls party the week after she beat the shit out of my friend. While everyone was getting trashed, I went around putting tuna inside all the curtain rods ',
          'so like weeks went by and they couldnt figure out why the house smelled like festering death.',
-         'https://thoughtcatalog.com/january-nelson/2018/06/funny-stories/#:~:text=They%20caught%20me%20through%20this%20video%20where%20these%20guys%20at%20the%20party%20were%20singing%20Beyonc%C3%A9%20while%20I%20was%20in%20the%20background%20with%20a%20can%20of%20tuna.'
+         'They caught me through this video where these guys at the party were singing Beyoncé while I was in the background with a can of tuna.'
       ]  
     },
     {
@@ -36,63 +37,63 @@ const App = () => {
       id: 3,
       key: 'article3',
       status: 'unmarked',
-      title: 'Article 3',
-      photo: 'article1.jpg',
+      title: 'My favorite teacher',
+      photo: 'http://joeforsyth.com/wp-content/uploads/2016/06/teacher_holding_book_and_laughing.jpg',
       paragraphs: [
-         'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-         'Sed auctor, magna eu bibendum vestibulum, ex metus malesuada velit.',
-         'Nam congue risus eget magna accumsan, euismod euismod risus'
+         ' One time in 6th grade we were at recess and while I was running to my friends, I just so happened to kick a HUGE rock (keep in mind, I was wearing flip-flops so it hurt like hell) and without thinking, I shouted at the top of my lungs',
+         '“MOTHERFUCKER!” And with my god-awful luck, my math teacher was sitting at the bench right BESIDE ME.',
+         'He then took me inside to what I thought was yell at me but he just couldnt stop laughing and sent me back outside with a literal candy bar. He is still my favorite teacher I have ever had.'
       ]  
     },
     {
       id: 4,
       key: 'article4',
       status: 'unmarked',
-      title: 'Article 4',
-      photo: 'article1.jpg',
+      title: 'Skull lover',
+      photo: 'https://cdn.fansshare.com/photo/josephmorgan/joseph-morgan-as-klaus-sitting-on-chair-holding-skull-desktop-wallpapers-joseph-morgan-1332098466.jpg',
       paragraphs: [
-         'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-         'Sed auctor, magna eu bibendum vestibulum, ex metus malesuada velit.',
-         'Nam congue risus eget magna accumsan, euismod euismod risus'
+         'So I was sitting at a lecture when I feel like being stared at, and in the corner of my eye I see this really handsome guy, whos literally just staring at me. I dont think much of it and continue to listen to the professor.',
+         'After the lecture the guy comes up to me, and lays his hand on head and Im like “eeeehm, what are you doing” and he stares me dead in the eyes and says',
+         '“Ive never seen such a gorgeous skull” and then he turns around and leaves.'
       ]  
     },
     {
       id: 5,
       key: 'article5',
       status: 'unmarked',
-      title: 'Article 5',
-      photo: 'article1.jpg',
+      title: 'A full sun',
+      photo: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunset-quotes-21-1586531574.jpg',
       paragraphs: [
-         'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-         'Sed auctor, magna eu bibendum vestibulum, ex metus malesuada velit.',
-         'Nam congue risus eget magna accumsan, euismod euismod risus'
+         'After an exhausting, weeklong festival I was getting a lift back home in a car full of my friends. We were coming up over a mountain road with a really beautiful ocean view just at sunset.',
+         'Ill never forget the outburst that followed when I said “wow its so beautiful, and its even a full sun!”',
+         'I momentarily forgot that only moons have phases, and that the sun is generally always "full" … my friends have never let me live it down.'
       ]  
     },
     {
       id: 6,
       key: 'article6',
       status: 'unmarked',
-      title: 'Article 6',
-      photo: 'article1.jpg',
+      title: ' Foreign student trauma',
+      photo: 'https://i0.wp.com/defendernetwork.com/wp-content/uploads/2022/11/GettyImages-482146883-scaled.jpg?fit=1200%2C835&ssl=1',
       paragraphs: [
-         'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-         'Sed auctor, magna eu bibendum vestibulum, ex metus malesuada velit.',
-         'Nam congue risus eget magna accumsan, euismod euismod risus'
+         'When I first moved from Lithuania to America I was 5 years old and didnt speak any English. On the first day of kindergarten I was crying so much that my teacher picked me up and let me sit on her lap',
+         'meanwhile the rest of the kids sat on the carpet in front of me and watched me cry while she explained to them what was going on (in a language I didnt understand). Our school was 3 buildings put together, and the pick up was at the “blue” building but my classroom was at the “red” building',
+         'so they put a sign over my neck that said “I dont speak English and Im going to the blue building” and sent me away to follow a crowd of other kids. Im still traumatized…'
       ]  
     },
     {
       id: 7,
       key: 'article7',
       status: 'unmarked',
-      title: 'Article 7',
-      photo: 'article1.jpg',
+      title: 'That one time I got lost',
+      photo: 'https://i.ytimg.com/vi/1wZhvyva1BA/maxresdefault.jpg',
       paragraphs: [
-         'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-         'Sed auctor, magna eu bibendum vestibulum, ex metus malesuada velit.',
-         'Nam congue risus eget magna accumsan, euismod euismod risus'
+         'So about a year ago, I was in Phys. Ed class, and we went around the neighborhood for a jog at the beginning of each class. I hadnt done it before because of medical reasons, but the teacher evidently forgot about it. ',
+         ' Im incredibly bad with directions and easily distracted, so I lost sight of the rest of the group and went completely the wrong way. ',
+         'I ended up being lost for TWO AND A HALF HOURS. the best part is that I single handedly changed my schools Phys. Ed policy.'
       ]
     },
-    // Add more articles here...
+    
   ]);
 
   // Effect to update the number of marked articles in the NavBar
