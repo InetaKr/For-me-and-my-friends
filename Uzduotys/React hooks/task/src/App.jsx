@@ -4,14 +4,14 @@ import Article from './components/Articles';
 import "./App.css";
 
 const App = () => {
-  // State to keep track of the number of marked articles
-  const [markedArticles, setMarkedArticles] = useState(0);
+  // State  kuris ziures kiek yra straipnius marked 
+  const [markedArticles, setMarkedArticles] = useState(0);// naudojamas useState hook sukurit a state variable ir funkcijai kuri updatintu 
 
-  // State to keep track of the articles
+
+  // State kuris ziures strapsnius  ju data
   const [articles, setArticles] = useState([
     {
       id: 1,
-      key: 'article1',
       status: 'unmarked',
       title: 'All the fish',
       photo: 'https://media.istockphoto.com/id/156239152/photo/man-eating-whole-raw-fish.jpg?s=612x612&w=0&k=20&c=DdiLvPyyi94NdTXyAt8wwtAFXxp9BWA0eWXXwZKAX84=',
@@ -23,7 +23,6 @@ const App = () => {
     },
     {
       id: 2,
-      key: 'article2',
       status: 'unmarked',
       title: 'Lotion boy',
       photo: 'https://i.imgflip.com/f74g2.jpg',
@@ -35,7 +34,6 @@ const App = () => {
     },
     {
       id: 3,
-      key: 'article3',
       status: 'unmarked',
       title: 'My favorite teacher',
       photo: 'http://joeforsyth.com/wp-content/uploads/2016/06/teacher_holding_book_and_laughing.jpg',
@@ -47,7 +45,6 @@ const App = () => {
     },
     {
       id: 4,
-      key: 'article4',
       status: 'unmarked',
       title: 'Skull lover',
       photo: 'https://cdn.fansshare.com/photo/josephmorgan/joseph-morgan-as-klaus-sitting-on-chair-holding-skull-desktop-wallpapers-joseph-morgan-1332098466.jpg',
@@ -59,7 +56,6 @@ const App = () => {
     },
     {
       id: 5,
-      key: 'article5',
       status: 'unmarked',
       title: 'A full sun',
       photo: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunset-quotes-21-1586531574.jpg',
@@ -71,7 +67,6 @@ const App = () => {
     },
     {
       id: 6,
-      key: 'article6',
       status: 'unmarked',
       title: ' Foreign student trauma',
       photo: 'https://i0.wp.com/defendernetwork.com/wp-content/uploads/2022/11/GettyImages-482146883-scaled.jpg?fit=1200%2C835&ssl=1',
@@ -83,7 +78,6 @@ const App = () => {
     },
     {
       id: 7,
-      key: 'article7',
       status: 'unmarked',
       title: 'That one time I got lost',
       photo: 'https://i.ytimg.com/vi/1wZhvyva1BA/maxresdefault.jpg',
@@ -96,13 +90,13 @@ const App = () => {
     
   ]);
 
-  // Effect to update the number of marked articles in the NavBar
+  // Effecto hookas kuris vis updatins skaiciu pazymetu strapsnius Navbare 
   useEffect(() => {
     const marked = articles.filter(article => article.status === 'marked').length;
     setMarkedArticles(marked);
   }, [articles]);
 
-  // Function to handle marking/unmarking of an article
+  //handleris kuris priziures marked/unmarked straipsniu statusa
   const handleMark = id => {
     const updatedArticles = articles.map(article => {
       if (article.id === id) {
@@ -130,7 +124,10 @@ const App = () => {
 
 export default App;
 
-
+//Kiekvieną kartą pažymėjus straipsnį, iškviečiama funkcija „markArticles“, 
+//kuri padidina pažymėtų straipsnių būseną vienu, o kai straipsnis nepažymėtas, iškviečiama funkcija unmarkArticle, 
+//kuri sumažina pažymėtų straipsnių būseną vienu. 
+// „markedArticle“ ir „unmarkArticle“ veikia kaip propsai.
 
 
 
