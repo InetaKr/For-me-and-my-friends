@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
-import Article from './components/Articles';
+import Article from './components/Article';
+import AddArticle from './components/AddArticle';
+import SignIn from './components/SignIn';
 import "./App.css";
 
 const App = () => {
@@ -86,41 +88,79 @@ const App = () => {
          ' Im incredibly bad with directions and easily distracted, so I lost sight of the rest of the group and went completely the wrong way. ',
          'I ended up being lost for TWO AND A HALF HOURS. the best part is that I single handedly changed my schools Phys. Ed policy.'
       ]
-    },
+    }, 
     
   ]);
 
-  // Effecto hookas kuris vis updatins skaiciu pazymetu strapsnius Navbare 
-  useEffect(() => {
-    const marked = articles.filter(article => article.status === 'marked').length;
-    setMarkedArticles(marked);
-  }, [articles]);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [username, setUsername] = useState('');
+  
 
-  //handleris kuris priziures marked/unmarked straipsniu statusa
-  const handleMark = id => {
-    const updatedArticles = articles.map(article => {
+
+  const handleMark = (id) => {
+    // Code to handle marking an article
+    const newArticles = articles.map(article => {
       if (article.id === id) {
         return {
           ...article,
-          status: article.status === 'marked' ? 'unmarked' : 'marked'
+          status: article.status === 'marked' ? 'unmarked' : 'marked',
         };
       }
       return article;
     });
-    setArticles(updatedArticles);
-  };
+    setArticles(newArticles);
+    setMarkedArticles(newArticles.filter(article => article.status === 'marked').length);
+  }
 
-  return (
-    <div>
-      <NavBar markedArticles={markedArticles} />
-      <div className="articles">
+  const addArticle = (newArticle) => {
+    // Code to handle adding a new article
+    setArticles([...articles, newArticle]);
+  }
+
+  const signIn = (credentials) => {
+    // Code to handle signing in a user
+    // You should check if the entered username and password match what you expect
+    // If they match, set loggedIn to true
+    // and set the username and password state variables
+    if(credentials.username === 'InetaKr' && credentials.password === 'belekas') {
+      setLoggedIn(true);
+      setUsername(credentials.username);
+    } else {
+      // handle error message
+      alert('Incorrect email or password.');
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  //Effecto hookas kuris vis updatins skaiciu pazymetu strapsnius Navbare 
+useEffect(() => {
+    const marked = articles.filter(article => article.status === 'marked').length;
+    setMarkedArticles(marked);
+  }, [articles]);
+
+  
+
+ return (
+  <div className="App">
+    <NavBar markedArticles={markedArticles} loggedIn={loggedIn} username={username} signIn={signIn} />
+    {loggedIn ? (
+      <div>
+        <AddArticle addArticle={addArticle} />
         {articles.map(article => (
           <Article key={article.id} article={article} handleMark={handleMark} />
         ))}
       </div>
-    </div>
-  );
-};
+    ) : (
+      <SignIn signIn={signIn} setLoggedIn={setLoggedIn} setUsername={setUsername} />
+    )}
+  </div>
+);
+}
 
 export default App;
 
