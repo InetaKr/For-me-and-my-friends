@@ -1,15 +1,11 @@
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckSquare, faClose } from '@fortawesome/free-solid-svg-icons'
-
 const Task = ({ task, deleteTask, markAsComplete }) => {
     return (
-        <div>
+        <div className={`task ${task.completed ? 'markAsComplete' : ''}`}>
             <p>{task.description}</p>
-            <button onClick={() => markAsComplete(task.id)}><FontAwesomeIcon icon={faCheckSquare} /></button>
-            <button onClick={() => deleteTask(task.id)}><FontAwesomeIcon icon={faClose} /></button>
+            <button onClick={() => markAsComplete(task.id)}>Completed</button>
+            <button onClick={() => deleteTask(task.id)}>Delete</button>
         </div>
     );
 }
-export default Task;
+export default Task
