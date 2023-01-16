@@ -37,24 +37,23 @@ nav{
     font-size: 1.5rem;
 }
 
-.articleForm{
-  margin-top: 500px;
+.sign-in{
+  font-size: 1.5rem;
 }
+
+
 
 .marked-articles{
     font-size: 1.5rem;
 }
 
-.articles{
-    margin-top: 200px;
-    
-}
+
 
 .article.unmarked{
     display: flex;
     flex-direction: row;
     background-color: #e4c079;
-    height: 500px;
+    height: 100%;
     width: 70%;
     border: 2px solid black;
     margin-left: 30px;
@@ -63,8 +62,8 @@ nav{
 }
 
 .article.unmarked img{
-    height: 400px;
-    width: 500px;
+    height: 500px;
+    width: 40%;
     padding:40px;
 }
 
@@ -76,13 +75,14 @@ nav{
 
 .article.unmarked p{
     font-size: 1.2rem;
+    width: 80%;
 }
 
 .article.marked{
     display: flex;
     flex-direction: row;
     background-color: #e4c079;
-    height: 500px;
+    height: 100%;
     width: 70%;
     border: 2px solid black;
     margin-left: 30px;
@@ -91,8 +91,8 @@ nav{
 }
 
 .article.marked img{
-    height: 400px;
-    width: 500px;
+    height: 500px;
+    width: 40%;
     padding:40px;
 }
 
@@ -104,6 +104,7 @@ nav{
 
 .article.marked p{
     font-size: 1.2rem;
+    width: 80%;
 }
 
 
@@ -158,7 +159,6 @@ nav{
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
@@ -166,3 +166,91 @@ nav{
   .slider.round:before {
     border-radius: 50%;
   }
+
+.SignInForm input{
+  height: 40px;
+  margin-top: 50px;
+  background-color: #e4c079;
+  border: transparent;
+  margin-right: 20px;
+  
+}
+
+.SignInForm input[type=submit]{
+  background-color: #f36e21;
+  font-size: 1rem;
+  color: white;
+}
+.SignInForm input[type=submit]:hover{
+  background-color: #622908;
+  cursor: pointer;
+}
+
+.articleForm{
+  margin-top: 250px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  display: inline-block;
+  background-color: rgb(180, 157, 31);
+  width: 70%;
+ height: 100%;
+}
+.articleForm h1{
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+
+}
+
+.articleForm input[type=text] {
+  height: 40px;
+  width: 80%;
+  margin-top: 40px;
+  margin-left: 30px;
+  background-color: #e4c079;
+  border-radius: 20px;
+  border: transparent;
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding-left: 30px;
+  
+}
+.articleForm textarea {
+  width: 80%;
+  height: 300px;
+  margin-top: 40px;
+  margin-left: 30px;
+  background-color: #e4c079;
+  border-radius: 20px;
+  border: transparent;
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding-left: 30px;
+  padding-top: 30px;
+  
+}
+
+
+
+.articleForm input[type=submit] {
+  height: 50px;
+  width: 40%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 200px;
+  text-align: center;
+  background-color: #f36e21;;
+  border-radius: 20px;
+  border: transparent;
+  color: rgb(246, 244, 244);
+  font-size: 1rem;
+  letter-spacing: 2px; 
+  
+}
+.articleForm input[type=submit]:hover {
+  background-color: #622908;
+  cursor: pointer;
+}
+

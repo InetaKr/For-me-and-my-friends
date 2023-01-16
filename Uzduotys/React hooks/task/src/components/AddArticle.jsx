@@ -21,9 +21,10 @@ const handleSubmit = (e) => {
 
 return (
 <form className='articleForm' onSubmit={handleSubmit}>
-    <input type="text" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
+    <h1>Add Article</h1>
+    <input type="text" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />  
     <input type="text" placeholder="Image URL" value={photo} onChange={e => setPhoto(e.target.value)} />
-    <textarea placeholder="Paragraphs (one per line)" value={paragraphs.join('\n')} onChange={e => setParagraphs(e.target.value.split('\n'))} />
+    <textarea placeholder="Paragraphs"  value={paragraphs.join('\n')} onChange={e => setParagraphs(e.target.value.split('\n'))} />
     <input type="submit" value="Add Article" />
 </form>
 );
