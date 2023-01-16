@@ -9,7 +9,6 @@ const App = () => {
   // State  kuris ziures kiek yra straipnius marked 
   const [markedArticles, setMarkedArticles] = useState(0);// naudojamas useState hook sukurit a state variable ir funkcijai kuri updatintu 
 
-
   // State kuris ziures strapsnius  ju data
   const [articles, setArticles] = useState([
     {
@@ -98,7 +97,7 @@ const App = () => {
 
 
   const handleMark = (id) => {
-    // Code to handle marking an article
+    // handilina statusa ar article marked ar nea
     const newArticles = articles.map(article => {
       if (article.id === id) {
         return {
@@ -113,37 +112,26 @@ const App = () => {
   }
 
   const addArticle = (newArticle) => {
-    // Code to handle adding a new article
+    // handilina nauju article addinima
     setArticles([...articles, newArticle]);
   }
 
   const signIn = (credentials) => {
-    // Code to handle signing in a user
-    // You should check if the entered username and password match what you expect
-    // If they match, set loggedIn to true
-    // and set the username and password state variables
+    // ziuri sign in info ir ae atitinka credentials
+   
     if(credentials.username === 'InetaKr' && credentials.password === 'belekas') {
       setLoggedIn(true);
       setUsername(credentials.username);
     } else {
-      // handle error message
       alert('Incorrect email or password.');
     }
   }
-  
-  
-  
-  
-  
-  
   
   //Effecto hookas kuris vis updatins skaiciu pazymetu strapsnius Navbare 
 useEffect(() => {
     const marked = articles.filter(article => article.status === 'marked').length;
     setMarkedArticles(marked);
   }, [articles]);
-
-  
 
  return (
   <div className="App">
