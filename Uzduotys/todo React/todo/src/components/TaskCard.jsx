@@ -1,7 +1,7 @@
 
 const TaskCard = ({ task, deleteTask, markAsComplete}) => {
     return (
-        <div>
+        <div className="CardTask">
             <h3>{task.TaskCardtitle}</h3>
             <img src={task.TaskCardimage} alt={task.TaskCardtitle}/>
             <p>{task.TaskCardDescription}</p>

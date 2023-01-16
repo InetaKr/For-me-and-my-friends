@@ -17,29 +17,26 @@ const AddTaskCard = ({ newTaskCard }) => {
     }
 
     return (
-        <form onSubmit={handleCardSubmit}>
-            <div>
+        <form onSubmit={handleCardSubmit} className="TaskCardForm">
+            <div className='TaskCardTitle'>
                 <label>Title:</label>
                 <input
                     type="text"
-                    placeholder="Task Title"
                     value={TaskCardtitle}
                     onChange={e => setTitle(e.target.value)}
                 />
             </div>
-            <div>
-                <label>Image:</label>
+            <div className='TaskCardImage' >
+                <label>Image URL:</label>
                 <input
                     type="text"
-                    placeholder="Task Image"
                     value={TaskCardimage}
                     onChange={e => setImage(e.target.value)}
                 />
             </div>
-            <div>
+            <div className='TaskCardDescription'>
                 <label>Description:</label>
                 <textarea
-                    placeholder="Task Description"
                     value={TaskCardDescription}
                     onChange={e => setDescription(e.target.value)}
                 />

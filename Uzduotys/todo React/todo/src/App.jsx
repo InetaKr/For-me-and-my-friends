@@ -40,9 +40,11 @@ function App() {
             <TaskList tasks={tasks} deleteTask={deleteTask} markAsComplete={markAsComplete} />
             <AddTask addTask={addTask} />
         </div>
-        <div className='FormTaskCard'>
-            <h1>Add More Info about Task </h1>
-            <AddTaskCard newTaskCard={newTaskCard} />
+        <h1 className='MoretaskInfo'>Add More Info about Task </h1>
+        <div className='FormTaskWrapper'>   
+            <AddTaskCard newTaskCard={newTaskCard} />  
+        </div>
+        <div className='CardTaskWrapper'>
             {submittedTask && <TaskCard task={submittedTask} deleteTask={deleteTask} markAsComplete={markAsComplete} />}
         </div>
         </>

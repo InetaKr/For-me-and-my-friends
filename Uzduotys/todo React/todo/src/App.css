@@ -119,5 +119,135 @@ body{
 .markAsComplete {
   color: rgb(15, 49, 16);
   text-decoration: line-through;
-  
 }
+
+.MoretaskInfo{
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.FormTaskWrapper{
+  background-color: rgb(161, 138, 183);
+  height: 100%;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-top: 60px;
+  border-radius: 40px;
+}
+
+.TaskCardForm{
+  display: inline-block;
+  margin: auto;
+}
+.TaskCardTitle label{
+  font-size: 1.5rem;
+  color: rgb(63, 13, 109);
+}
+.TaskCardTitle input{
+  font-size: 1.5rem;
+  color: rgb(63, 13, 109);
+  margin-top: 30px;
+  background-color: transparent;
+  border: 2px solid rgb(116, 23, 110);
+  border-radius: 0px 20px 20px 0px;
+  margin-left: 5px;
+}
+
+.TaskCardImage label{
+  font-size: 1.5rem;
+  color: rgb(63, 13, 109);
+}
+
+.TaskCardImage input{
+  font-size: 1rem;
+  color: rgb(63, 13, 109);
+  margin-top: 30px;
+  background-color: transparent;
+  border: 2px solid rgb(116, 23, 110);
+  border-radius: 0px 20px 20px 0px;
+  margin-left: 5px;
+}
+
+.TaskCardDescription label{
+  font-size: 1.5rem;
+  color: rgb(63, 13, 109);
+}
+.TaskCardDescription textarea{
+  font-size: 1rem;
+  color: rgb(63, 13, 109);
+  margin-top: 30px;
+  background-color: transparent;
+  border: 2px solid rgb(116, 23, 110);
+  border-radius: 0px 20px 20px 0px;
+  margin-left: 5px;
+}
+
+.TaskCardForm button{
+  width: 30%;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid rgb(116, 23, 110);
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+.TaskCardForm button:hover{
+  background-color: rgb(116, 23, 110);
+  cursor: pointer;
+}
+
+.CardTaskWrapper{
+  background-color: rgb(161, 138, 183);
+  height: 100%;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-top: 60px;
+  border-radius: 40px;
+}
+
+
+.CardTask h3{
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(63, 13, 109);
+}
+.CardTask img{
+  height: 60%;
+  width: 80%;
+  margin-left: 60px;
+}
+.CardTask p{
+  height: 60%;
+  width: 80%;
+  margin-left: 60px;
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.taskCardButton button{
+  width: 30%;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid rgb(116, 23, 110);
+  color: white;
+  font-size: 1rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+.taskCardButton button:hover{
+ cursor: pointer;
+ background-color: rgb(116, 23, 110);
+}
+
+
+
+
