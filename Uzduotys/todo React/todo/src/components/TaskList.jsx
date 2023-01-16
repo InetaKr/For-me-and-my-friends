@@ -1,4 +1,3 @@
-
 import Task from './Task';
 
 const TaskList = ({ tasks, deleteTask, markAsComplete }) => {
