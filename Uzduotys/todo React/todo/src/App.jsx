@@ -26,7 +26,7 @@ function App() {
     }
 
     return (
-        <div>
+        <div className='formWrapper'>
             <TaskCounter tasks={tasks} />
             <TaskList tasks={tasks} deleteTask={deleteTask} markAsComplete={markAsComplete} />
             <AddTask addTask={addTask} />
