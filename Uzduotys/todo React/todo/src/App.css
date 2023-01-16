@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: rgb(97, 96, 96);
+  background-color: rgb(63, 13, 109);
 }
 
 .formWrapper{
@@ -19,7 +19,7 @@ body{
   text-align: right;
   padding-right: 20px;
   font-size: 2rem;
-  color: rgb(63, 13, 109);
+  color: rgb(116, 23, 110);
 }
 
 .TaskSubmit{
