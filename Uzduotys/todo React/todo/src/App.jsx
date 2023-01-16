@@ -8,7 +8,7 @@ import AddTaskCard from './components/AddTaskCard';
 
 function App() {
     const [tasks, setTasks] = useState([]);
-    const [submittedTask, setSubmittedTask] = useState(null);
+    
 
     const addTask = (task) => {
         setTasks([...tasks, task]);
@@ -16,12 +16,11 @@ function App() {
 
     const newTaskCard = (newTaskCard) => {
         setTasks([...tasks, newTaskCard]);
-        setSubmittedTask(newTaskCard);
+
     }
 
     const deleteTask = (id) => {
         setTasks(tasks.filter(task => task.id !== id));
-        if(submittedTask && submittedTask.id === id) setSubmittedTask(null);
     }
 
     const markAsComplete = (id) => {
@@ -45,7 +44,7 @@ function App() {
             <AddTaskCard newTaskCard={newTaskCard} />  
         </div>
         <div className='CardTaskWrapper'>
-            {submittedTask && <TaskCard task={submittedTask} deleteTask={deleteTask} markAsComplete={markAsComplete} />}
+            {tasks.map(task => <TaskCard key={task.id} task={task} deleteTask={deleteTask} markAsComplete={markAsComplete} />)}
         </div>
         </>
     );
