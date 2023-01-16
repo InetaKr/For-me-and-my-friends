@@ -1,4 +1,3 @@
-import React from 'react';
 
 const TaskCounter = ({ tasks }) => {
     const incompleteTasks = tasks.filter(task => !task.completed);
