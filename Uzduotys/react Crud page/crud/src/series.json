@@ -1,0 +1,34 @@
+{
+  "series": [
+    {
+      "name": "The Witcher",
+      "season": "Season 1",
+      "year": "2O19",
+      "genre": "Sciences Fiction",
+      "views": "541 mln. hours viewed",
+      "isSeen": false,
+      "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
+      "id": 1
+    },
+    {
+      "name": "Wednesday",
+      "season": "Season 1",
+      "year": "2022",
+      "genre": "Horrow Comedy",
+      "views": "1.02 billion hours viewed",
+      "isSeen": false,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShN5Pyz-hrmvH5IbBUQiWryvOcTXFoPqALNQ&usqp=CAU",
+      "id": 2
+    },
+    {
+      "name": "Monster: The Jeffrey Dahmer Story",
+      "season": "Season 1",
+      "year": "2022",
+      "genre": "Thriller",
+      "views": "1 billion hours viewed",
+      "isSeen": false,
+      "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/DAHMER_Evan-Peters_mugshot.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
+      "id": 3
+    }
+  ]
+}
