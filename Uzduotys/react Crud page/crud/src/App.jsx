@@ -42,6 +42,19 @@ const handleDeleteSeries = async (id) => {
   }).catch(error => console.error(error));
 };
 
+const handleUpdateSeries = async (id, updatedSeries ) => {
+  await fetch(`http://localhost:5001/series/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(updatedSeries),
+    headers: { 'Content-Type': 'application/json' },
+  }).then(res => {
+    if(res.ok){
+    setSeries(series.map(singleSeries => singleSeries.id === id ? updatedSeries : singleSeries));
+    }
+  }).catch(error => console.error(error));
+};
+
+
 
   return (
     <div className="App">
@@ -53,7 +66,9 @@ const handleDeleteSeries = async (id) => {
 <SeriesCard
 key={singleSeries.id}
 series={singleSeries}
+id={singleSeries.id} 
 onDeleteSeries={handleDeleteSeries}
+handleUpdateSeries={handleUpdateSeries}
 />
 ))}
 

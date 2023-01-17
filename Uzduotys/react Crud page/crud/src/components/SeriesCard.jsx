@@ -1,13 +1,17 @@
+import React, { useState } from 'react';
+import UpdateSeriesForm from './UpdateSeriesForm';
 
 
-
-function SeriesCard({ series, onDeleteSeries }) {
+const SeriesCard =({ series, onDeleteSeries, handleUpdateSeries })=> {
+    const [isEditing, setIsEditing] = useState(false);
 
   const handleDelete = () => {
     onDeleteSeries(series.id);
   };
 
-  
+  const handleEditClick = () => {
+    setIsEditing(!isEditing);
+  };
 
   return (
     <div>
@@ -18,8 +22,14 @@ function SeriesCard({ series, onDeleteSeries }) {
       <p>Genre: {series.genre}</p>
       <p>Views: {series.views}</p>
       <p>Seen: {series.isSeen ? 'Yes' : 'No'}</p>
-      
+      <button onClick={handleEditClick}>Edit</button>
       <button onClick={handleDelete}>Delete</button>
+      {isEditing && (
+        <UpdateSeriesForm
+          series={series}
+          handleUpdateSeries={handleUpdateSeries}         
+        />
+      )}
      
     </div>
   );
