@@ -1,31 +1,31 @@
 {
     "users": [
       {
-        "name": "InetaSleepingCat",
+        "username": "InetaSleepingCat",
         "password": "belekas",
         "icon": "https://e1.pxfuel.com/desktop-wallpaper/428/888/desktop-wallpaper-cat-icons-lockscreens-red-psd-and-aesthetic-aesthetic-cat.jpg",
         "id": 1
       },
       {
-        "name": "GiedreTotoro",
+        "username": "GiedreTotoro",
         "password": "belekas",
         "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBY_4l8cvxlkEWtANeU5tt94VV8T5NO6ETQg&usqp=CAU",
         "id": 2
       },
       {
-        "name": "Ugne-StanUp",
+        "username": "Ugne-StanUp",
         "password": "belekas",
         "icon": "https://static.vecteezy.com/system/resources/thumbnails/016/123/765/small/microphone-icon-vintage-device-with-a-wire-hand-drawn-illustration-isolated-on-white-musical-item-for-karaoke-broadcasts-stand-up-simple-doodle-outline-cartoon-clipart-for-logo-prints-vector.jpg",
         "id": 3
       },
       {
-        "name": "LigitaSmartMouse",
+        "username": "LigitaSmartMouse",
         "password": "belekas",
         "icon":"https://img.freepik.com/premium-vector/cute-cartoon-meisje-baby-muis-hand-tekenen-cartoon_157027-23.jpg?w=2000",
         "id": 4
       },
       {
-        "name": "AusraDrieziukas",
+        "username": "AusraDrieziukas",
         "password": "belekas",
         "icon": "https://media.istockphoto.com/id/1217805856/vector/small-lizard.jpg?s=170667a&w=0&k=20&c=wFRErT0e6-OoGx8b7THSdlzf54QNHsmmcPubWh-UMKM=",
         "id": 5

@@ -2,7 +2,7 @@ import companyLogo from '../images/logo.png'
 import React, { useState } from 'react';
 import SignIn from './SignIn';
 
-const NavBar = ({ signIn, loggedIn, username }) => {
+const NavBar = ({ signIn, loggedIn, username, icon }) => {
   const [showSignIn, setShowSignIn] = useState(false);
 
   return (
@@ -12,7 +12,13 @@ const NavBar = ({ signIn, loggedIn, username }) => {
       </div>
       <div className="user-info">
         {loggedIn ? (
-          <div className="user-name">Welcome, {username}</div>
+          <div className="user-name">
+            <div> {icon} <div/>
+            <div>Welcome, {username}</div>
+          </div>
+          </div>  
+        
+          
         ) : (
           <div className="sign-in" onClick={() => setShowSignIn(!showSignIn)}>
             Sign In
@@ -20,6 +26,7 @@ const NavBar = ({ signIn, loggedIn, username }) => {
         )}
       </div>
       {showSignIn && <SignIn signIn={signIn} setShowSignIn={setShowSignIn} />}
+      
     </nav>
   );
 };
