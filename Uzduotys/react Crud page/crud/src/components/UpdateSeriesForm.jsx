@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const UpdateSeriesForm = ({ series, handleUpdateSeries }) => {
+const UpdateSeriesForm = ({ series, handleUpdateSeries, onChange }) => {
   const [updatedSeries, setUpdatedSeries] = useState({ ...series });
 
   const handleInputChange = (event) => {
@@ -11,6 +11,7 @@ const UpdateSeriesForm = ({ series, handleUpdateSeries }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     handleUpdateSeries(series.id, updatedSeries);
+    onChange();
   };
 
   return (

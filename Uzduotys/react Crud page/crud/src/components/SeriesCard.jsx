@@ -5,6 +5,10 @@ import UpdateSeriesForm from './UpdateSeriesForm';
 const SeriesCard =({ series, onDeleteSeries, handleUpdateSeries })=> {
     const [isEditing, setIsEditing] = useState(false);
 
+    const handleUpdate = () => {
+        setIsEditing(false);
+    };  
+
   const handleDelete = () => {
     onDeleteSeries(series.id);
   };
@@ -27,7 +31,8 @@ const SeriesCard =({ series, onDeleteSeries, handleUpdateSeries })=> {
       {isEditing && (
         <UpdateSeriesForm
           series={series}
-          handleUpdateSeries={handleUpdateSeries}         
+          handleUpdateSeries={handleUpdateSeries} 
+          onChange={handleUpdate}        
         />
       )}
      
