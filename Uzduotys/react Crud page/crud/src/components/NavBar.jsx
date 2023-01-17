@@ -1,6 +1,6 @@
-import companyLogo from '../images/logo.png'
 import React, { useState } from 'react';
 import SignIn from './SignIn';
+import companyLogo from '../images/logo.png'
 
 const NavBar = ({ signIn, loggedIn, username, icon }) => {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -13,12 +13,9 @@ const NavBar = ({ signIn, loggedIn, username, icon }) => {
       <div className="user-info">
         {loggedIn ? (
           <div className="user-name">
-            <div> {icon} <div/>
+            <img src={icon} alt={username} />
             <div>Welcome, {username}</div>
           </div>
-          </div>  
-        
-          
         ) : (
           <div className="sign-in" onClick={() => setShowSignIn(!showSignIn)}>
             Sign In
@@ -26,8 +23,8 @@ const NavBar = ({ signIn, loggedIn, username, icon }) => {
         )}
       </div>
       {showSignIn && <SignIn signIn={signIn} setShowSignIn={setShowSignIn} />}
-      
     </nav>
   );
 };
+
 export default NavBar;
