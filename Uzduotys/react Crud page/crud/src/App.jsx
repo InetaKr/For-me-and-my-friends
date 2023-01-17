@@ -21,30 +21,26 @@ function App() {
     fetchData();
   }, []);
 
-  const handleAddSeries = async newSeries => {
-    try {
-      const response = await fetch('http://localhost:5001/series', {
-        method: 'POST',
+  const handleAddSeries = async (newSeries) => {
+    await fetch("http://localhost:5001/series", {
+        method: "POST",
         body: JSON.stringify(newSeries),
-        headers: { 'Content-Type': 'application/json' },
-      });
-      const data = await response.json();
-      setSeries([...series, data]);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+        headers: { "Content-Type": "application/json" },
+    }).then(res => res.json())
+    .then(data => setSeries([...series, data]))
+    .catch(error => console.error(error));
+};
 
-  const handleDeleteSeries = async (id) => {
-    try {
-      await fetch(`http://localhost:5001/series/${id}`, {
-        method: 'DELETE',
-      });
+
+const handleDeleteSeries = async (id) => {
+  await fetch(`http://localhost:5001/series/${id}`, {
+    method: 'DELETE',
+  }).then(res => {
+    if(res.ok){
       setSeries(series.filter(singleSeries => singleSeries.id !== id));
-    } catch (error) {
-      console.error(error);
     }
-  };
+  }).catch(error => console.error(error));
+};
 
 
   return (
