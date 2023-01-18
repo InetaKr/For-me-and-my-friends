@@ -18,16 +18,19 @@ const SeriesCard =({ series, onDeleteSeries, handleUpdateSeries })=> {
   };
 
   return (
-    <div>
+   
+    <div className='seriesCards'>
       <img src={series.image} alt={series.name} />
       <h2>{series.name}</h2>
-      <p>Season: {series.season}</p>
-      <p>Year: {series.year}</p>
-      <p>Genre: {series.genre}</p>
-      <p>Views: {series.views}</p>
-      <p>Seen: {series.isSeen ? 'Yes' : 'No'}</p>
+      <p><span>Season:</span> {series.season}</p>
+      <p><span>Year:</span> {series.year}</p>
+      <p><span>Genre:</span> {series.genre}</p>
+      <p><span>Views:</span> {series.views}</p>
+      <p><span>Seen:</span> {series.isSeen ? 'Yes' : 'No'}</p>
+      <div className='buttonWrapper'>
       <button onClick={handleEditClick}>Edit</button>
       <button onClick={handleDelete}>Delete</button>
+      </div>
       {isEditing && (
         <UpdateSeriesForm
           series={series}
@@ -35,8 +38,9 @@ const SeriesCard =({ series, onDeleteSeries, handleUpdateSeries })=> {
           onChange={handleUpdate}        
         />
       )}
-     
-    </div>
+     </div>
+    
+    
   );
 }
 

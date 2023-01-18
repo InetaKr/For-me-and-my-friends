@@ -22,7 +22,9 @@ function NewSeriesForm({ onAddSeries }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='newSeriesFormWrapper'>
+    <form onSubmit={handleSubmit} className="newSeriesForm">
+      <h1>Add Series to your WatchList</h1>
       <label>
         Name:
         <input type="text" value={name} onChange={e => setName(e.target.value)} />
@@ -44,15 +46,16 @@ function NewSeriesForm({ onAddSeries }) {
         <input type="text" value={views} onChange={e => setViews(e.target.value)} />
         </label>
       <label>
-        Is seen:
-        <input type="checkbox" checked={isSeen} onChange={e => setIsSeen(e.target.checked)} />
-      </label>
-      <label>
         Image:
         <input type="text" value={image} onChange={e => setImage(e.target.value)} />
       </label>
+      <label>
+        Is seen:
+        <input type="checkbox" checked={isSeen} onChange={e => setIsSeen(e.target.checked)} />
+      </label>
       <button type="submit">Add Series</button>
     </form>
+  </div>
   );
 }
 export default NewSeriesForm;

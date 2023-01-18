@@ -1,0 +1,290 @@
+body{
+    background-color: rgb(47, 46, 46);;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.headerContent{
+    background-image: url('https://miro.medium.com/max/1400/1*NcPxtNCUegVpoMZ3kbVh8Q.jpeg');
+    height: 100vh;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+}
+
+.headerContent h1{
+    text-align: center;
+      font-size: 2.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.6rem;
+      opacity: 0.7;
+      padding-top: 180px; 
+      text-shadow: 7px 5px 4px #C20000;
+  }
+  .headerContent p{
+    text-align: center;
+      font-size: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.6rem;
+      opacity: 0.7;
+      text-shadow: 7px 5px 4px #C20000;
+        
+  }
+  
+  .headerContent span{
+    color: red;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  .headerContent button{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 150px;
+    height: 50px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+     
+  }
+  
+  .headerContent button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    scale: 1.2;
+  }
+  
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(56, 55, 55);
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.logo img {
+    height: 100px;
+    margin-top: 20px;    
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.user-name{
+    font-size: 2rem;
+    color:red
+}
+
+.sign-in{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 150px;
+    height: 50px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+}
+
+.sign-in:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    scale: 1.2;
+  }
+
+.signInForm input{
+    height: 40px;
+    margin-top: 50px;
+    background-color: #121212;
+    border: transparent;
+    margin-right: 20px;  
+    color: red;  
+  }
+  
+.login{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 100px;
+    height: 40px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;;
+  }
+.login:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+  }
+
+.newSeriesForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    background-color: #121212;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+.newSeriesFormWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.newSeriesForm h1{
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    text-shadow: 7px 5px 4px #C20000;
+}
+.newSeriesForm label{
+    color: red;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    width: 60%;
+}
+.newSeriesForm input{
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    background-color: transparent;
+    height: 30px;
+    width: 70%;
+
+}
+.newSeriesForm button{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 30%;
+    height: 40px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+    margin-bottom: 30px;
+
+}
+.newSeriesForm button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.title-h1{
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 7px 5px 4px #C20000;
+}
+
+.seriesCardsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content:space-evenly;
+    margin-top: 50px;
+ 
+}
+
+.seriesCards{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    text-align: center;
+    opacity: 0.7;
+}
+.seriesCards:hover{
+  cursor: pointer;
+  box-shadow:  0 10px 12px 0 rgba(232, 29, 29, 0.2), 0 10px 24px 0 rgba(232, 16, 16, 0.19);
+  scale: 1.1;
+  opacity: 1;
+   
+}
+
+.seriesCards img{
+width: 100%;
+  height: 320px
+}
+
+.seriesCards h2{
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 7px 5px 4px #C20000;
+}
+.seriesCards p{
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 2px;   
+}
+
+.seriesCards span{
+    font-size: 1.3rem;
+    color: #C20000;    
+}
+
+.seriesCards button{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 30%;
+    height: 40px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+    margin-bottom: 30px;
+}
+.seriesCards button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.UpdateForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    
+}
+.UpdateForm input{
+    background-color: transparent;
+    color:white;
+    font-size:1rem;
+}
+.UpdateForm label{
+    
+    color:red;
+    font-size:1.3rem;
+}
+
+  

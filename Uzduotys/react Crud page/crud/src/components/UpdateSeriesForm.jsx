@@ -15,7 +15,7 @@ const UpdateSeriesForm = ({ series, handleUpdateSeries, onChange }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="UpdateForm">
       <label>
         Name:
         <input

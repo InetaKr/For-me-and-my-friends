@@ -3,6 +3,7 @@ import Header from './components/Header';
 import NavBar from "./components/NavBar";
 import SeriesCard from './components/SeriesCard';
 import NewSeriesForm from './components/NewSeriesForm';
+import "./App.css";
 
 function App() {
   const [series, setSeries] = useState([]);
@@ -62,6 +63,10 @@ const handleUpdateSeries = async (id, updatedSeries ) => {
       <Header isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
     <div>
       <NewSeriesForm onAddSeries={handleAddSeries} />
+      <div className='title-h1'>
+        <h1>Your WatchList</h1>
+      </div>
+      <div className='seriesCardsWrapper'>
 {series.map(singleSeries => (
 <SeriesCard
 key={singleSeries.id}
@@ -71,7 +76,7 @@ onDeleteSeries={handleDeleteSeries}
 handleUpdateSeries={handleUpdateSeries}
 />
 ))}
-
+</div>
 </div>
 </div>
 );

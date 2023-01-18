@@ -6,7 +6,7 @@ const SignInForm = (props) => {
     password: ''
   });
   
-  //updating name and password property
+ 
   const handleUserInput = (e) => {
     switch (e.target.name) {
       case 'name':
@@ -29,9 +29,9 @@ const SignInForm = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const signInDuomenys = await fetch('http://localhost:5000/users')
-      .then(rez => rez.json());
-    const user = signInDuomenys.find(user => user.name === userLogin.name && user.password === userLogin.password);
+    const signInCredentials = await fetch('http://localhost:5000/users')
+      .then(res => res.json());
+    const user = signInCredentials.find(user => user.name === userLogin.name && user.password === userLogin.password);
     if (user) {
         props.handleSuccessfulLogin("Welcome, " + userLogin.name );
     } else {
@@ -39,7 +39,7 @@ const SignInForm = (props) => {
     }
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="signInForm">
       <input
         type="text"
         placeholder="Username"
