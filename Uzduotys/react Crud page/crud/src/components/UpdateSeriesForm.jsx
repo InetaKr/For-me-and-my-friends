@@ -43,6 +43,24 @@ const UpdateSeriesForm = ({ series, handleUpdateSeries, onChange }) => {
           onChange={handleInputChange}
         />
       </label>
+      <label>
+        Genre:
+        <input
+          type="text"
+          name="genre"
+          value={updatedSeries.genre}
+          onChange={handleInputChange}
+        />
+      </label>
+      <label>
+      Is seen:
+        <input
+          type="checkbox"
+          name="isSeen"
+          value={updatedSeries.isSeen}
+          onChange={handleInputChange}
+        />
+      </label>
       <button 
       type="submit"
       onChange={() => handleUpdateSeries(series.id, updatedSeries)}

@@ -33,7 +33,7 @@ const SignInForm = (props) => {
       .then(rez => rez.json());
     const user = signInDuomenys.find(user => user.name === userLogin.name && user.password === userLogin.password);
     if (user) {
-        props.handleSuccessfulLogin("Welcome, " + userLogin.name);
+        props.handleSuccessfulLogin("Welcome, " + userLogin.name );
     } else {
       props.handleSuccessfulLogin("Invalid Username or password");
     }

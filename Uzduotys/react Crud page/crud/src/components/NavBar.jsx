@@ -17,6 +17,7 @@ const NavBar = () => {
 
   return (
     <>
+    
       {showSignInButton && (
         <button className="sign-in" onClick={handleSignInClick}>Sign In</button>
         )}
