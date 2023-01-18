@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SignInForm from "./SignInForm";
+import companyLogo from '../images/logo.png'
 
 const NavBar = () => {
   const [showSignInButton, setShowSignInButton] = useState(true); //new state variable
@@ -17,7 +18,12 @@ const NavBar = () => {
 
   return (
     <>
-    
+    <nav>
+    <div className="logo">
+        <img src={companyLogo} alt="" />
+      </div>
+      <div className="user-info">
+
       {showSignInButton && (
         <button className="sign-in" onClick={handleSignInClick}>Sign In</button>
         )}
@@ -25,7 +31,9 @@ const NavBar = () => {
         <SignInForm handleSuccessfulLogin={handleSuccessfulLogin}/>
         )}
          { status && <div>{status}</div> }
-        </>
+        </div>
+       </nav> 
+       </>
         );
         }
 export default NavBar        

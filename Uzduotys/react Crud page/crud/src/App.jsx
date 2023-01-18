@@ -58,9 +58,9 @@ const handleUpdateSeries = async (id, updatedSeries ) => {
 
   return (
     <div className="App">
-      <Header isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
       <NavBar />
-      <div>
+      <Header isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
+    <div>
       <NewSeriesForm onAddSeries={handleAddSeries} />
 {series.map(singleSeries => (
 <SeriesCard
