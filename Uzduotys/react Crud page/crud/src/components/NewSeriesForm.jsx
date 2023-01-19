@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
+/// komponentas skirtas formai kuri leidzia useriui prideti nauja serijala i watchlista
+//komponentas turi keleta state variables(name, season, year, genre, views, isSeen, and image), kurie naudojami storinti values is formos
+//kiekvinas variable naudoja useState hookas 
 function NewSeriesForm({ onAddSeries }) {
   const [name, setName] = useState('');
   const [season, setSeason] = useState('');
@@ -9,6 +12,11 @@ function NewSeriesForm({ onAddSeries }) {
   const [isSeen, setIsSeen] = useState(false);
   const [image, setImage] = useState('');
 
+
+
+  ///komponentas turi funkcija handleSubmit kuri issaukiama kai useris submitina forma. ji prevetina default ir callina onAddSeries funkcija kuri perduodama kaip propsas komponentui.
+  //praeidamas per objecta su formos inputais ir argumentais.. poto vel resetina visus value sto default value
+  
   const handleSubmit = event => {
     event.preventDefault();
     onAddSeries({ name, season, year, genre, views, isSeen, image });
@@ -59,3 +67,8 @@ function NewSeriesForm({ onAddSeries }) {
   );
 }
 export default NewSeriesForm;
+
+
+///apslkritai komponentas atsakingas uz forma kuri leidzia useriui addinti serijala i watchlista.
+//komponentas handlina formos inputus ka useris iraso ir kai submitina forma. callina onAddSeries finkcija ir perduoda inputu data.
+///taip pat resetina formos inputuskai forma yra susubmitintga.
