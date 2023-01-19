@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import UpdateSeriesForm from './UpdateSeriesForm';
 
 ///komponentas serijalu korteles kuri displayina serijalu infomacija ir leidzia useriui is deletinti ar updatinti serijalo info 
