@@ -1,0 +1,39 @@
+{
+   "checks":[
+    {
+        "id": 1,
+        "customerNumber": "3",
+        "price":"12.5"
+    },
+    {
+        "id": 2,
+        "customerNumber": "2",
+        "price":"10.5"
+    },
+    {
+        "id": 3,
+        "customerNumber": "1",
+        "price":"4.2"
+    },
+    {
+        "id": 4,
+        "customerNumber": "2",
+        "price":"1.3"
+    },
+    {
+        "id": 5,
+        "customerNumber": "9",
+        "price":"0.8"
+    },
+    {
+        "id": 6,
+        "customerNumber": "6",
+        "price":"6.66"
+    },
+    {
+        "id": 7,
+        "customerNumber": "2",
+        "price":"8.2"
+    }
+   ] 
+}
