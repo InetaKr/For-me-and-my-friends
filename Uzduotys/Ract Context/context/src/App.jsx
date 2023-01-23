@@ -4,8 +4,11 @@ import Home from './components/Home'
 import Add from './components/Add'
 import Edit from './components/Edit'
 import { Route, Routes } from 'react-router-dom'
+import { useContext } from "react";
+import ChecksContext from "./ChecksContext";
 
 const App =() => {
+  const { handleAddChecks } = useContext(ChecksContext);
   return (
     <>
     <header>
@@ -17,7 +20,7 @@ const App =() => {
           <Home />
         }/>
         <Route path='/add' element={
-          <Add />
+          <Add onAdd={handleAddChecks} />
         }/>
         <Route path='/edit' element={
           <Edit />
