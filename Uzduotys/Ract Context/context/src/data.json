@@ -1,44 +1,44 @@
 {
-   "checks":[
+   "orders":[
     {
         "id": 1,
-        "customerNumber": "3",
+        "people": "3",
         "price":"12.5",
         "mealName": "Steak with Potatoes"
     },
     {
         "id": 2,
-        "customerNumber": "2",
+        "people": "2",
         "price":"10.5",
         "mealName": "Fried Chicken with Potatoes"
     },
     {
         "id": 3,
-        "customerNumber": "1",
+        "people": "1",
         "price":"4.2",
         "mealName": "Potatoes"
     },
     {
         "id": 4,
-        "customerNumber": "2",
+        "people": "2",
         "price":"1.3",
         "mealName":"Juice"
     },
     {
         "id": 5,
-        "customerNumber": "9",
+        "people": "9",
         "price":"0.8",
         "mealName": "Garlic Sauce"
     },
     {
         "id": 6,
-        "customerNumber": "6",
+        "people": "6",
         "price":"6.66",
         "mealName": "Hell Potatoes"
     },
     {
         "id": 7,
-        "customerNumber": "2",
+        "people": "2",
         "price":"8.2",
         "mealName": "OMG Potatoes"
     }
