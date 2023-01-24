@@ -8,10 +8,24 @@ const OrderProvider = ({ children }) => {
   const [people, setPeople] = useState('');
   const [price, setPrice] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  
 
  
 
+  // Fetch the initial data from the back-end
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    setIsLoading(true);
+    try {
+      const res = await fetch('http://localhost:5000/orders');
+      const data = await res.json();
+      setOrders(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 
   // Add a new order
@@ -28,19 +42,6 @@ const OrderProvider = ({ children }) => {
       console.log(error);
     }
   };
-
-// Fetch the initial data from the back-end
-useEffect(() => {
-  fetch('http://localhost:5000/orders')
-    .then((res) => res.json())
-    .then((data) => {
-      setOrders(data);
-      setIsLoading(false);
-    });
-}, []);
-
-
-
 
   // Edit an existing order
   const editOrder = async (id, newData) => {
@@ -93,7 +94,7 @@ useEffect(() => {
         people,
         price,
         isLoading,
-       
+        fetchData,
 
 addOrder,
 setPeople,
