@@ -24,6 +24,8 @@ const Home = () => {
                 <td>{order.id}</td>
                 <td>{order.people}</td>
                 <td>{order.price}</td>
+                <td><button>Delete</button></td>
+                <td><button>Edit</button></td>
               </tr>
             ))}
           </tbody>

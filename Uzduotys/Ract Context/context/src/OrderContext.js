@@ -1,4 +1,4 @@
-import {  createContext, useState } from 'react';
+import {  createContext, useState, useEffect } from 'react';
 
 const OrderContext = createContext();
 
@@ -9,10 +9,15 @@ const OrderProvider = ({ children }) => {
   const [price, setPrice] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-
+ 
 
   // Fetch the initial data from the back-end
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const fetchData = async () => {
+    setIsLoading(true);
     try {
       const res = await fetch('http://localhost:5000/orders');
       const data = await res.json();
@@ -22,6 +27,7 @@ const OrderProvider = ({ children }) => {
       console.log(error);
     }
   };
+
 
   // Add a new order
   const addOrder = async newOrder => {
@@ -69,11 +75,10 @@ const OrderProvider = ({ children }) => {
   };
 
 
-  const handleSubmitEdit = e => {
+  const handleSubmitEdit = ( e) => {
     e.preventDefault();
-    editOrder({ people, price, mealName });
-    
-  };
+    editOrder(id, { people, price, mealName });
+};
 
 
   
