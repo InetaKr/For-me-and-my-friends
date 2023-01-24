@@ -23,12 +23,6 @@
       "people": "2",
       "price": "1.3",
       "mealName": "Juice"
-    },
-    {
-      "id": 5,
-      "people": "9",
-      "price": "0.8",
-      "mealName": "Garlic Sauce"
     }
   ]
 }

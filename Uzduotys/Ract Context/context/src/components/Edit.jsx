@@ -3,20 +3,29 @@ import OrderContext  from '../OrderContext';
 
 
 
-const Edit = ({ id }) => {
+const Edit = ({ orderId, setShowEditForm, }) => {
    
   const { orders, people, price, mealName, setPeople, setPrice,setMealName, handleSubmitEdit} = useContext(OrderContext);
   
-  const order = orders.find(order => order.id === id);
+  const order = orders.find(order => order.id === orderId);
   
   useEffect(() => {
-    setPeople(order.people);
-    setPrice(order.price);
-    setMealName(order.mealName)
-    }, [order, setPeople,setPrice,setMealName]);
-    
+    if (order) {
+      setPeople(order.people);
+      setPrice(order.price);
+      setMealName(order.mealName)
+    }
+  }, [order, setPeople,setPrice,setMealName]);
+
+  if (!order) {
+    return <div>Order not found</div>;
+  }
+
     return (
-      <form onSubmit={(e) => {e.preventDefault(); handleSubmitEdit(order.id, { people, price, mealName })}}>
+      <form onSubmit={(e) => {
+        e.preventDefault(); 
+        handleSubmitEdit(orderId, { people, price, mealName }); 
+        setShowEditForm(false)}}>
     <label>
     Meal Name:
     <input type="text" value={mealName} onChange={e => setMealName(e.target.value)} />

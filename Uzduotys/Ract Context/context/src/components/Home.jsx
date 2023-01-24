@@ -1,11 +1,17 @@
 
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import OrderContext  from '../OrderContext';
+import Edit from './Edit';
 
 const Home = () => {
-  const { orders, isLoading, deleteOrder, editOrder } = useContext(OrderContext);
+  const [showEditForm, setShowEditForm] = useState(false);
+  const [editOrderId, setEditOrderId] = useState(null);
+  const { orders, isLoading, deleteOrder } = useContext(OrderContext);
 
-
+  const handleEdit = (orderId) => {
+    setEditOrderId(orderId);
+    setShowEditForm(true);
+  }
   
 
   return (
@@ -28,7 +34,7 @@ const Home = () => {
                 <td>{order.people}</td>
                 <td>{order.price}</td>
                 <td><button onClick={()=>deleteOrder(order.id)}>Delete</button></td>
-                <td><button onClick={()=> editOrder(order.id)}>Edit</button></td>
+                <td><button onClick={()=> handleEdit(order.id)}>Edit</button></td>
               </tr>
             ))}
           </tbody>
@@ -36,6 +42,7 @@ const Home = () => {
       ) : (
         <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading"/>
       )}
+       {showEditForm && <Edit orderId={editOrderId} setShowEditForm={setShowEditForm} />}
     </div>
   );
 }
