@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import OrderContext  from '../OrderContext';
 
 const Home = () => {
-  const { orders, isLoading } = useContext(OrderContext);
+  const { orders, isLoading, deleteOrder, editOrder } = useContext(OrderContext);
 
 
   
@@ -27,8 +27,8 @@ const Home = () => {
                 <td>{order.id}</td>
                 <td>{order.people}</td>
                 <td>{order.price}</td>
-                <td><button>Delete</button></td>
-                <td><button>Edit</button></td>
+                <td><button onClick={()=>deleteOrder(order.id)}>Delete</button></td>
+                <td><button onClick={()=> editOrder(order.id)}>Edit</button></td>
               </tr>
             ))}
           </tbody>

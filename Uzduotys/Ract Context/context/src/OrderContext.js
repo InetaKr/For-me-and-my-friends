@@ -44,11 +44,11 @@ const OrderProvider = ({ children }) => {
   };
 
   // Edit an existing order
-  const editOrder = async (id, newData) => {
+  const handleSubmitEdit = async (id, newData) => {
     try {
       const res = await fetch(`http://localhost:5000/orders/${id}`, {
         method: 'PUT',
-        body: JSON.stringify({ people, price,mealName }),
+        body: JSON.stringify({ newData}),
         headers: { 'Content-Type': 'application/json' }
       });
       const data = await res.json();
@@ -74,10 +74,6 @@ const OrderProvider = ({ children }) => {
   };
 
 
-  const handleSubmitEdit = ( e) => {
-    e.preventDefault();
-    editOrder( { people, price, mealName });
-};
 
 
   
@@ -99,7 +95,6 @@ const OrderProvider = ({ children }) => {
 addOrder,
 setPeople,
 setPrice,
-editOrder,
 handleSubmitEdit,
 deleteOrder,
 mealName,

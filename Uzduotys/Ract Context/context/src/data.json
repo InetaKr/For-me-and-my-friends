@@ -29,60 +29,6 @@
       "people": "9",
       "price": "0.8",
       "mealName": "Garlic Sauce"
-    },
-    {
-      "id": 6,
-      "people": "6",
-      "price": "6.66",
-      "mealName": "Hell Potatoes"
-    },
-    {
-      "id": 7,
-      "people": "2",
-      "price": "8.2",
-      "mealName": "OMG Potatoes"
-    },
-    {
-      "people": "4",
-      "price": "4",
-      "mealName": "cascas",
-      "id": 8
-    },
-    {
-      "people": "4",
-      "price": "4",
-      "mealName": "cascas",
-      "id": 9
-    },
-    {
-      "people": "4",
-      "price": "4",
-      "mealName": "cascas",
-      "id": 10
-    },
-    {
-      "people": "4",
-      "price": "4",
-      "mealName": "cascas",
-      "id": 11
-    },
-    {
-      "people": "4",
-      "price": "4",
-      "mealName": "cascas",
-      "id": 12
-    },
-    {
-      "people": "4",
-      "price": "4",
-      "mealName": "cascas",
-      "id": 13
-    },
-    {
-      "people": "45",
-      "price": "65",
-      "mealName": "gfrg",
-      "id": 14
     }
   ]
 }

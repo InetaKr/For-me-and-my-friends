@@ -16,7 +16,7 @@ const Edit = ({ id }) => {
     }, [order, setPeople,setPrice,setMealName]);
     
     return (
-    <form onSubmit={handleSubmitEdit(order.id)}>
+      <form onSubmit={(e) => {e.preventDefault(); handleSubmitEdit(order.id, { people, price, mealName })}}>
     <label>
     Meal Name:
     <input type="text" value={mealName} onChange={e => setMealName(e.target.value)} />
