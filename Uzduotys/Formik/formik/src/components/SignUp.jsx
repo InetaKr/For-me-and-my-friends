@@ -14,7 +14,7 @@ const SignUp = () => {
     const [values, setValues] =useState({
         username: "",
         email: "",
-        age: "",
+        age: 0,
         password: "",
         confirmPassword: ""
     })
