@@ -52,7 +52,7 @@ const SignUp = () => {
         >
             {({errors, touched, values, setValues}) =>(
                 <Form>
-                    <div>
+                    <div className="wrapper">
                         <label >
                             Username 
                             <Field
@@ -67,7 +67,7 @@ const SignUp = () => {
                             }
                         </label>
                     </div>
-                    <div>
+                    <div className="wrapper">
                         <label >
                            Email 
                             <Field
@@ -82,7 +82,7 @@ const SignUp = () => {
                             }
                         </label>
                     </div>
-                    <div>
+                    <div className="wrapper">
                         <label >
                            Age 
                             <Field
@@ -97,7 +97,7 @@ const SignUp = () => {
                             }
                         </label>
                     </div>
-                    <div>    
+                    <div className="wrapper">    
                         <label >
                            Password 
                             <Field
@@ -113,7 +113,7 @@ const SignUp = () => {
                             }
                         </label>
                     </div>
-                    <div>    
+                    <div className="wrapper">    
                         <label >
                            Confirm Password 
                             <Field
@@ -129,7 +129,7 @@ const SignUp = () => {
                             }
                         </label>
                     </div>
-                    <button type="submit" >Submit</button>
+                    <button type="submit">Submit</button>
                 </Form>
             )}
 
