@@ -14,13 +14,12 @@ const Register = () => {
   });
 
   const [invalidUsername, setInvalidUsername] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
+ 
 
   const { users, addNewUser, setLoggedInUser } = useContext(UserContext);
 
   const handleSubmit = (values, { setSubmitting }) => {
     if (values.password !== values.confirmPassword) {
-      setPasswordError(true);
       setSubmitting(false);
       return;
     }
@@ -57,7 +56,7 @@ const Register = () => {
 
     const validationSchema = yup.object().shape({
       userName: yup.string()
-        .max (10, 'Must be 10 characters or less')
+        .max (15, 'Must be 10 characters or less')
         .required ('Required'),
       password: yup.string()
          .min(5)
@@ -103,7 +102,6 @@ const Register = () => {
           type="password" name="password" value={values.password}
           onChange={(e) => setValues({ ...values, password: e.target.value })}
           />
-          {passwordError && <span>Passwords do not match</span>}
           {
             errors.password && touched.password ?
             <span>{errors.password}</span>
