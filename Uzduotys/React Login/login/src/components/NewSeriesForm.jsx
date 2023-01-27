@@ -2,7 +2,7 @@ import CardContext from "../context/CardContext";
 import UserContext from "../context/UserContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SingleSeries from "./SingleSeries";
+
 
 const NewSeriesForm = () => {
 
@@ -15,10 +15,8 @@ const NewSeriesForm = () => {
     image: ''
   });
 
-  const { addNewSeries, setSeries } = useContext(CardContext);
+  const { addNewSeries } = useContext(CardContext);
   const { loggedInUser } = useContext(UserContext);
-  const [markedSeries, setMarkedSeries] = useState(0)
-
   const navigation = useNavigate();
 
   
@@ -42,20 +40,7 @@ const NewSeriesForm = () => {
     navigation('/');
   }
 
-  const handleMark = (id) => {
-    // handilina statusa ar article marked ar nea
-    const newSeries = series.map(singleSeries => {
-      if (singleSeries.id === id) {
-        return {
-          ...singleSeries,
-          status: singleSeries.isSeen === 'marked' ? 'unmarked' : 'marked',
-        };
-      }
-      return singleSeries;
-    });
-    setSeries(newSeries);
-    setMarkedSeries(newSeries.filter(singleSeries => singleSeries.status === 'marked').length);
-  }
+
 
   return (
     <>
@@ -76,7 +61,7 @@ const NewSeriesForm = () => {
         </label>
         <label>
           Season:
-          <input type="text" name="season"
+          <input type="number" name="season"
             value={formInputs.season}
             onChange={(e) => setFormInputs({...formInputs, season:e.target.value})}
           />
@@ -109,4 +94,4 @@ const NewSeriesForm = () => {
   );
 }
  
-export default NewPostForm;
+export default NewSeriesForm;

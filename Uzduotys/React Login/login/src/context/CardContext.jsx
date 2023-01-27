@@ -16,7 +16,7 @@ const CardProvider = ({ children }) => {
 }, []);
 
   const addNewSeries = async (newSeries) => {
-    await fetch("http://localhost:5001/series",{
+    await fetch("http://localhost:5000/series",{
         method: "POST", 
         body: JSON.stringify(newSeries),
         headers: { "Content-Type": "application/json" },
@@ -25,7 +25,7 @@ const CardProvider = ({ children }) => {
   };
 
   const deleteSeries = async (id) => {
-    await fetch(`http://localhost:5001/series/${id}`, {
+    await fetch(`http://localhost:5000/series/${id}`, {
     method: 'DELETE',
   }).then(res => {
     if(res.ok){
@@ -35,7 +35,7 @@ const CardProvider = ({ children }) => {
 };
 
   const updateSeries =  async (id, updatedSeries) => {
-    await fetch(`http://localhost:5001/series/${id}`, {
+    await fetch(`http://localhost:5000/series/${id}`, {
     method: 'PUT',
     body: JSON.stringify(updatedSeries),
     headers: { 'Content-Type': 'application/json' },

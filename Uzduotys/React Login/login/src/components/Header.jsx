@@ -11,15 +11,25 @@ const Header = () => {
 
   return (
     <>
+     
     {
-      loggedInUser ? 
-      <UserInfo /> :
+      loggedInUser ? (
+     <div> 
+      <UserInfo /> 
+      <div className="addNewSeries">
+      <Link to="/newSeries">Add New Series</Link>
+    </div>
+    </div>
+   
+      ):
       <div className="loginRegister">
         <Link to='/login'>Login</Link>
         <br />
         <Link to='/register'>Register</Link>
       </div>
+      
     }
+
     <hr />
     <Outlet />
   </>

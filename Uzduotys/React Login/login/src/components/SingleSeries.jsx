@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const SingleSeries = ({data}) => {
 
   const { users, loggedInUser } = useContext(UserContext);
-  const { deleteSeries } = useContext(CardContext);
-  const [markedSeries, setMarkedSeries] = useState(0)
+  const { deleteSeries, series, setSeries } = useContext(CardContext);
+  
 
   const seriesPostOwner = users.find(user => user.id === data.userId);
 
@@ -17,13 +17,12 @@ const SingleSeries = ({data}) => {
       if (singleSeries.id === id) {
         return {
           ...singleSeries,
-          status: singleSeries.isSeen === 'marked' ? 'unmarked' : 'marked',
+          isSeen: singleSeries.isSeen === 'marked' ? 'unmarked' : 'marked',
         };
       }
       return singleSeries;
     });
     setSeries(newSeries);
-    setMarkedSeries(newSeries.filter(singleSeries => singleSeries.status === 'marked').length);
   }
 
   return (
@@ -44,7 +43,7 @@ const SingleSeries = ({data}) => {
       <hr />
       <img src={data.image} alt={data.name} />
       <h1>{data.name}</h1>
-      <p><span>Season:</span> {data.season}</p>
+      <p><span>Season:</span> Season {data.season}</p>
       <p><span>Year:</span> {data.year}</p>
       <p><span>Genre:</span> {data.genre}</p>
       <p><span>Description:</span>{data.description}</p>

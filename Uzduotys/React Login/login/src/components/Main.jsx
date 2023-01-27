@@ -1,9 +1,10 @@
+import Series from "./Series";
 
 
 const Main = () => {
     return (
       <>
-       
+       <Series/>
       </>
     );
   }
