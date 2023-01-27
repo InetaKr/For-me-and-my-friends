@@ -1,5 +1,6 @@
 import UserContext from "../context/UserContext";
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -8,19 +9,27 @@ const Login = () => {
     password: '',
   });
   const [invalidCredentials, setInvalidCredentials] = useState(false);
+  const [userIsBanned, setUserIsBanned] = useState(false);
+  const navigation = useNavigate();
+
 
   const { users, setLoggedInUser } = useContext(UserContext);
   
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const user = users.find(user => user.userName === formInputs.userName && user.password === formInputs.password);
-    if (user) {
-      setLoggedInUser(user);
+    const loggedInUser = users.find(user => user.userName === formInputs.userName && user.password === formInputs.password);
+
+    if(!loggedInUser.isBanned){
+      setLoggedInUser(loggedInUser);
+      navigation('/');
+    } else if(loggedInUser.isBanned){
+      setUserIsBanned(true);
     } else {
       setInvalidCredentials(true);
     }
   }
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -41,6 +50,10 @@ const Login = () => {
       {
         invalidCredentials && <span>Invalid username or password.</span>
       }
+      {
+    userIsBanned && <span>Your account is banned.</span>
+}
+
     </>
   );
 }
