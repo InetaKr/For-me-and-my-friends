@@ -1,0 +1,77 @@
+{
+    "series": [
+      {
+        "name": "The Witcher",
+        "season": "Season 1",
+        "year": "2O19",
+        "genre": "Sciences Fiction",
+        "views": "541 mln. hours viewed",
+        "isSeen": false,
+        "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
+        "id": 1
+      },
+      {
+        "name": "Wednesday",
+        "season": "Season 1",
+        "year": "2022",
+        "genre": "Horrow Comedy",
+        "views": "1.02 billion hours viewed",
+        "isSeen": false,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShN5Pyz-hrmvH5IbBUQiWryvOcTXFoPqALNQ&usqp=CAU",
+        "id": 2
+      },
+      {
+        "name": "Monster: The Jeffrey Dahmer Story",
+        "season": "Season 1",
+        "year": "2022",
+        "genre": "Thriller",
+        "views": "1 billion hours viewed",
+        "isSeen": false,
+        "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/DAHMER_Evan-Peters_mugshot.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
+        "id": 3,
+        "": "Season 12"
+      }
+    ],
+    "users": [
+        {
+          "username": "InetaKr",
+          "level": "admin",
+          "isBanned": false,
+          "password": "belekas",
+          "icon": "https://e1.pxfuel.com/desktop-wallpaper/428/888/desktop-wallpaper-cat-icons-lockscreens-red-psd-and-aesthetic-aesthetic-cat.jpg",
+          "id": 1
+        },
+        {
+          "username": "GiedreTotoro",
+          "level": "user",
+          "isBanned": false,
+          "password": "belekas",
+          "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBY_4l8cvxlkEWtANeU5tt94VV8T5NO6ETQg&usqp=CAU",
+          "id": 2
+        },
+        {
+          "username": "Ugne-StanUp",
+          "level": "user",
+          "isBanned": false,
+          "password": "belekas",
+          "icon": "https://static.vecteezy.com/system/resources/thumbnails/016/123/765/small/microphone-icon-vintage-device-with-a-wire-hand-drawn-illustration-isolated-on-white-musical-item-for-karaoke-broadcasts-stand-up-simple-doodle-outline-cartoon-clipart-for-logo-prints-vector.jpg",
+          "id": 3
+        },
+        {
+          "username": "LigitaSmartMouse",
+          "level": "user",
+          "isBanned": false,
+          "password": "belekas",
+          "icon":"https://img.freepik.com/premium-vector/cute-cartoon-meisje-baby-muis-hand-tekenen-cartoon_157027-23.jpg?w=2000",
+          "id": 4
+        },
+        {
+          "username": "AusraDrieziukas",
+          "level": "user",
+          "isBanned": false,
+          "password": "belekas",
+          "icon": "https://media.istockphoto.com/id/1217805856/vector/small-lizard.jpg?s=170667a&w=0&k=20&c=wFRErT0e6-OoGx8b7THSdlzf54QNHsmmcPubWh-UMKM=",
+          "id": 5
+        }
+      ]
+  }
