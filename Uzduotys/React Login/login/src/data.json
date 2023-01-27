@@ -1,77 +1,94 @@
 {
-    "series": [
-      {
-        "name": "The Witcher",
-        "season": "Season 1",
-        "year": "2O19",
-        "genre": "Sciences Fiction",
-        "views": "541 mln. hours viewed",
-        "isSeen": false,
-        "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
-        "id": 1
-      },
-      {
-        "name": "Wednesday",
-        "season": "Season 1",
-        "year": "2022",
-        "genre": "Horrow Comedy",
-        "views": "1.02 billion hours viewed",
-        "isSeen": false,
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShN5Pyz-hrmvH5IbBUQiWryvOcTXFoPqALNQ&usqp=CAU",
-        "id": 2
-      },
-      {
-        "name": "Monster: The Jeffrey Dahmer Story",
-        "season": "Season 1",
-        "year": "2022",
-        "genre": "Thriller",
-        "views": "1 billion hours viewed",
-        "isSeen": false,
-        "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/DAHMER_Evan-Peters_mugshot.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
-        "id": 3,
-        "": "Season 12"
-      }
-    ],
-    "users": [
-        {
-          "username": "InetaKr",
-          "level": "admin",
-          "isBanned": false,
-          "password": "belekas",
-          "icon": "https://e1.pxfuel.com/desktop-wallpaper/428/888/desktop-wallpaper-cat-icons-lockscreens-red-psd-and-aesthetic-aesthetic-cat.jpg",
-          "id": 1
-        },
-        {
-          "username": "GiedreTotoro",
-          "level": "user",
-          "isBanned": false,
-          "password": "belekas",
-          "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBY_4l8cvxlkEWtANeU5tt94VV8T5NO6ETQg&usqp=CAU",
-          "id": 2
-        },
-        {
-          "username": "Ugne-StanUp",
-          "level": "user",
-          "isBanned": false,
-          "password": "belekas",
-          "icon": "https://static.vecteezy.com/system/resources/thumbnails/016/123/765/small/microphone-icon-vintage-device-with-a-wire-hand-drawn-illustration-isolated-on-white-musical-item-for-karaoke-broadcasts-stand-up-simple-doodle-outline-cartoon-clipart-for-logo-prints-vector.jpg",
-          "id": 3
-        },
-        {
-          "username": "LigitaSmartMouse",
-          "level": "user",
-          "isBanned": false,
-          "password": "belekas",
-          "icon":"https://img.freepik.com/premium-vector/cute-cartoon-meisje-baby-muis-hand-tekenen-cartoon_157027-23.jpg?w=2000",
-          "id": 4
-        },
-        {
-          "username": "AusraDrieziukas",
-          "level": "user",
-          "isBanned": false,
-          "password": "belekas",
-          "icon": "https://media.istockphoto.com/id/1217805856/vector/small-lizard.jpg?s=170667a&w=0&k=20&c=wFRErT0e6-OoGx8b7THSdlzf54QNHsmmcPubWh-UMKM=",
-          "id": 5
-        }
-      ]
-  }
+  "series": [
+    {
+      "name": "The Witcher",
+      "season": "Season 1",
+      "year": "2O19",
+      "genre": "Sciences Fiction",
+      "views": "541 mln. hours viewed",
+      "isSeen": false,
+      "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
+      "id": 1
+    },
+    {
+      "name": "Wednesday",
+      "season": "Season 1",
+      "year": "2022",
+      "genre": "Horrow Comedy",
+      "views": "1.02 billion hours viewed",
+      "isSeen": false,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShN5Pyz-hrmvH5IbBUQiWryvOcTXFoPqALNQ&usqp=CAU",
+      "id": 2
+    },
+    {
+      "name": "Monster: The Jeffrey Dahmer Story",
+      "season": "Season 1",
+      "year": "2022",
+      "genre": "Thriller",
+      "views": "1 billion hours viewed",
+      "isSeen": false,
+      "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/DAHMER_Evan-Peters_mugshot.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "userName": "InetaKr",
+      "level": "admin",
+      "isBanned": false,
+      "password": "belekas",
+      "avatar": "https://e1.pxfuel.com/desktop-wallpaper/428/888/desktop-wallpaper-cat-icons-lockscreens-red-psd-and-aesthetic-aesthetic-cat.jpg",
+      "id": 1
+    },
+    {
+      "userName": "GiedreTotoro",
+      "level": "user",
+      "isBanned": false,
+      "password": "belekas",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBY_4l8cvxlkEWtANeU5tt94VV8T5NO6ETQg&usqp=CAU",
+      "id": 2
+    },
+    {
+      "userName": "Ugne-StanUp",
+      "level": "user",
+      "isBanned": false,
+      "password": "belekas",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/016/123/765/small/microphone-icon-vintage-device-with-a-wire-hand-drawn-illustration-isolated-on-white-musical-item-for-karaoke-broadcasts-stand-up-simple-doodle-outline-cartoon-clipart-for-logo-prints-vector.jpg",
+      "id": 3
+    },
+    {
+      "userName": "LigitaSmartMouse",
+      "level": "user",
+      "isBanned": false,
+      "password": "belekas",
+      "avatar": "https://img.freepik.com/premium-vector/cute-cartoon-meisje-baby-muis-hand-tekenen-cartoon_157027-23.jpg?w=2000",
+      "id": 4
+    },
+    {
+      "userName": "AusraDrieziukas",
+      "level": "user",
+      "isBanned": false,
+      "password": "belekas",
+      "avatar": "https://media.istockphoto.com/id/1217805856/vector/small-lizard.jpg?s=170667a&w=0&k=20&c=wFRErT0e6-OoGx8b7THSdlzf54QNHsmmcPubWh-UMKM=",
+      "id": 5
+    },
+    {
+      "userName": "fewfwe",
+      "password": "123",
+      "passwordRepeat": "123",
+      "avatar": "data:image/jpeg;base64,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",
+      "id": 1674813424239,
+      "level": "user",
+      "isBanned": false
+    },
+    {
+      "userName": "scasca",
+      "password": "123",
+      "passwordRepeat": "123",
+      "avatar": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIUAhQMBEQACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAFAAMEBgEHCAL/xAA+EAABAwMBBQQHBAoCAwAAAAABAAIDBAURBhIhMVFhBxNBcSIyUoGRobEUFULBCCNTYnKSorLC0WOCFjND/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAMBAgQFBv/EAC8RAAMAAQMCBQIFBAMAAAAAAAABAgMEETESIQUTMkFRItEUQoGRoTNxseEVUmH/2gAMAwEAAhEDEQA/AN4FAAnTt7hvbK4xFpfR1s1LIGngWO3fLBQAXQAkAJACQBGq6+koozJW1MNOwfimkDB81DaXJaZq+0rcB1GvdK05xJe6Un/jJf8A2gqvmR8mhaLUP8jIzO0vR73bIvDQf3oJAP7VHmx8lnoNQvy/4CVHq/Tla5rKa9ULnu4NMzWk+44Vlcv3E1ps093LDTXte0OYQ5p4EHIVhPB6QAkAJAGDwQAItV7huV4u9BAQTbZI43ke05u0f9IAMIASANF9muo/unXV5pal+zS3CumDyeDJO8dsu/I+Y5KAN6BSBgnCAK7qjWdo043YqpjLVEZbSw4Lz1PgB1KVkyzHJq0+iy6h/Su3yatvvaPqG7OcyieLbTk7mw75COrj+WFhvWN8HcweFYY9X1MqE8M9VIZaqWWeQ8XyvLj8SszztnRmJlbSthl1F0QspbYZkpMK6yEbESSEt8E1XuVconWq/wB4sr9q2XKpp8fha/LT/wBTuPwTVbXDM2XTY8nqk2Rpjtke0sg1LS7TeH2ql",
+      "id": 1674813743268,
+      "level": "user",
+      "isBanned": false
+    }
+  ]
+}
