@@ -1,18 +1,28 @@
 import UserInfo from '../components/UserInfo';
-
+import { Link, Outlet } from 'react-router-dom';
+import UserContext from "../context/UserContext";
+import { useContext } from "react";
 
 
 const Header = () => {
 
-  
+  const { loggedInUser } = useContext(UserContext);
+
 
   return (
     <>
-      
-        <UserInfo /> :
-        
-      
-    </>
+    {
+      loggedInUser ? 
+      <UserInfo /> :
+      <div className="loginRegister">
+        <Link to='/login'>Login</Link>
+        <br />
+        <Link to='/register'>Register</Link>
+      </div>
+    }
+    <hr />
+    <Outlet />
+  </>
   );
 }
  

@@ -2,6 +2,7 @@ import UserContext from "../context/UserContext";
 import { useState, useContext } from "react";
 import { Formik, Form, Field } from "formik";
 import * as yup from 'yup';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,7 +15,7 @@ const Register = () => {
   });
 
   const [invalidUsername, setInvalidUsername] = useState(false);
- 
+  const navigation = useNavigate();
 
   const { users, addNewUser, setLoggedInUser } = useContext(UserContext);
 
@@ -44,6 +45,7 @@ const Register = () => {
         .then(data => {
           addNewUser(newUser);
           setLoggedInUser(newUser);
+          navigation('/');
         })
         .catch(error => {
           console.error('Error:', error);
