@@ -49,7 +49,7 @@
     {
       "userName": "GiedreTotoro",
       "level": "user",
-      "isBanned": false,
+      "isBanned": true,
       "password": "belekas",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBY_4l8cvxlkEWtANeU5tt94VV8T5NO6ETQg&usqp=CAU",
       "id": 2
@@ -96,6 +96,5 @@
       "level": "user",
       "isBanned": false
     }
-   
   ]
 }

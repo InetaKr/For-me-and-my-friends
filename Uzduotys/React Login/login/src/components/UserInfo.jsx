@@ -26,7 +26,7 @@ const UserInfo = () => {
         {loggedInUser && <span>{loggedInUser.userName}</span>}
       </div>
       <div style={{display:'flex', justifyContent:'flex-end'}}>
-        {loggedInUser && loggedInUser.level === 'admin' && <span>Admin</span>}  <Link to="/admin">Manage Users</Link>
+        {loggedInUser && loggedInUser.level === 'admin' && <span>Admin</span> && <Link to="/admin">Manage Users</Link>}
         {loggedInUser && (
           <button onClick={() => logOutUser()}>LogOut</button>
         )}
