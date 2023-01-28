@@ -74,7 +74,7 @@ const EditSeriesForm = () => {
             onChange={(e) => setFormInputs({...formInputs, description:e.target.value})}
           />
         </label>
-        <input type="submit" value="Edit Post" />
+        <input type="submit" value="Edit Series" />
 
         </form>
     </>

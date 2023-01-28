@@ -7,6 +7,7 @@ import UserPage from './components/UserPage';
 import { Routes, Route } from 'react-router-dom';
 import AdminPage from './components/AdminPage';
 import NewSeriesForm from './components/NewSeriesForm';
+import EditSeriesForm from './components/EditSeriesForm';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/user" element={<UserPage />}/>
         <Route path="/admin" element={<AdminPage />}/>
         <Route path="/newSeries" element={<NewSeriesForm />}/>
+        <Route path="/editSeries/:id" element={<EditSeriesForm />}/>
         </Route>
         
 

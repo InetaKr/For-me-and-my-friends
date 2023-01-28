@@ -36,7 +36,7 @@ const CardProvider = ({ children }) => {
 
   const updateSeries =  async (id, updatedSeries) => {
     await fetch(`http://localhost:5000/series/${id}`, {
-    method: 'PUT',
+    method: 'PATCH',
     body: JSON.stringify(updatedSeries),
     headers: { 'Content-Type': 'application/json' },
   }).then(res => {
