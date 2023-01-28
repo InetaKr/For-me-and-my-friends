@@ -41,7 +41,7 @@ const CardProvider = ({ children }) => {
     headers: { 'Content-Type': 'application/json' },
   }).then(res => {
     if(res.ok){
-        setSeries(series.map(singleSeries => singleSeries.id.toString() === id ? {...series, ...updatedSeries} : series));
+        setSeries(series.map(singleSeries => singleSeries.id.toString() === id ? {...singleSeries, ...updatedSeries} : singleSeries));
   }
 })
 };

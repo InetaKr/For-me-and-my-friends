@@ -14,12 +14,12 @@ const Series = () => {
   return (
     <>
       {
-        availableSeries.map(singleSeries => 
-          <SingleSeries 
-            key={singleSeries.id}
-            data={singleSeries}
-          />  
-        )
+       availableSeries.map((singleSeries, index) => 
+       <SingleSeries 
+         key={singleSeries.id || index}
+         data={singleSeries}
+       />  
+     )
       }
     </>
   );

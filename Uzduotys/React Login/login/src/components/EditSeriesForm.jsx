@@ -7,10 +7,12 @@ const EditSeriesForm = () => {
   const { id } = useParams();
 
   const { series, updateSeries } = useContext(CardContext);
+  
+  const navigation = useNavigate();
 
   const selectedSeries = series.find(singleSeries => singleSeries.id.toString() === id)
 
-  const navigation = useNavigate();
+ 
 
   const [formInputs, setFormInputs] = useState({
     name: selectedSeries.name,
@@ -20,7 +22,7 @@ const EditSeriesForm = () => {
       description: selectedSeries.description,
       image: selectedSeries.image,
   });
-
+  
   const handleSubmit = e => {
     e.preventDefault();
     
@@ -28,6 +30,7 @@ const EditSeriesForm = () => {
     
     navigation('/');
   }
+
 
   return (
     <>
