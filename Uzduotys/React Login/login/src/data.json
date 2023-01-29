@@ -13,7 +13,8 @@
       "userId": 1,
       "likedBy": [],
       "seenBy": [
-        1
+        1,
+        4
       ]
     },
     {
@@ -28,9 +29,13 @@
       "id": 2,
       "userId": 3,
       "likedBy": [
-        1
+        1,
+        4
       ],
-      "seenBy": []
+      "seenBy": [
+        2,
+        3
+      ]
     },
     {
       "name": "Monster: The Jeffrey Dahmer Story",
@@ -38,15 +43,18 @@
       "year": "2022",
       "genre": "Thriller",
       "description": "The story of Jeffrey Dahmer, one of America's most notorious serial killers, partly told from the point of view of his victims. The series dives into the police incompetence and apathy that allowed the Wisconsin native to go on a multiyear killing spree. It dramatizes multiple instances where Dahmer was almost apprehended, but ultimately let go. Dahmer was a cleancut guy, who was repeatedly given a free pass by cops, as well as by judges, who were lenient when he had been charged with crimes.",
-      "isSeen": "unmarked",
-      "isLiked": true,
+      "isSeen": "marked",
+      "isLiked": false,
       "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/DAHMER_Evan-Peters_mugshot.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
       "id": 3,
       "userId": 5,
       "likedBy": [
-        1
+        1,
+        2
       ],
-      "seenBy": []
+      "seenBy": [
+        3
+      ]
     },
     {
       "name": "I LOVE YOU, NOW DIE",
@@ -56,19 +64,21 @@
       "description": "Teen Michelle Carter's actions shocked a nation - but what really happened behind closed doors? This HBO special showcases the prosecution's point of view and alternately the defense's. Which side do you fall on?",
       "image": "data:image/jpeg;base64,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",
       "isSeen": "unmarked",
-      "isLiked": false,
+      "isLiked": true,
       "id": 1674851753524,
       "userId": 1,
-      "likedBy": [],
+      "likedBy": [
+        2
+      ],
       "seenBy": []
     },
     {
-      "name": "NaujasSerijalas2edit2",
-      "season": "18",
-      "year": "2031",
-      "genre": "siaubodddvvv",
-      "description": "dewcaedcawdscwdcqdcqwdxqwdqwdqwdxwqsdxqsdxwqscqwc",
-      "image": "https://i.pinimg.com/736x/65/dd/d4/65ddd4b8881cd50c9e0af5b12eebb4e5.jpg",
+      "name": "Bridgerton",
+      "season": "1",
+      "year": "2020",
+      "genre": "Romantic",
+      "description": "Bridgerton follows Daphne Bridgerton (Phoebe Dynevor), the eldest daughter of the powerful Bridgerton family as she makes her debut onto Regency London’s competitive marriage market. Hoping to follow in her parent’s footsteps and find a match sparked by true love, Daphne’s prospects initially seem to be unrivaled.",
+      "image": "https://185.224.81.106/uploads/posts/2022-04/91239_backdrop_path_1648930947.jpg",
       "isSeen": "unmarked",
       "isLiked": false,
       "id": 1674939148992,
@@ -77,17 +87,87 @@
       "seenBy": []
     },
     {
-      "name": "NaujasSerijalas12edit",
-      "season": "6",
-      "year": "1994",
-      "genre": "detektyvas",
-      "description": "cwrwvwvcwevwevwevcevwevwevwedvwdev",
-      "image": "https://allaboutcats.com/wp-content/uploads/2020/10/Sphynx-Cat-compressed.jpg",
+      "name": "Don't F**k with Cats",
+      "season": "1",
+      "year": "2017",
+      "genre": "True Crime",
+      "description": "Don't F**k With Cats offers an intriguing tale, but questionable intent and muddled storytelling make it a hard sell for anyone but true crime completists.",
+      "image": "https://www.heavenofhorror.com/wp-content/uploads/2019/12/dont-fuck-with-cats-hunting-an-internet-killer-review-netflix.jpg",
       "isSeen": "unmarked",
-      "isLiked": false,
+      "isLiked": true,
       "id": 1674959698460,
       "userId": 2,
+      "likedBy": [
+        4
+      ],
+      "seenBy": []
+    },
+    {
+      "name": "Loki",
+      "season": "1",
+      "year": "2021",
+      "genre": "Fantasy",
+      "description": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”",
+      "image": "https://www.cultura.id/wp-content/uploads/2021/07/LOKI2.jpeg",
+      "isSeen": "unmarked",
+      "isLiked": true,
+      "id": 1675031012311,
+      "userId": 1,
+      "likedBy": [
+        1,
+        3
+      ],
+      "seenBy": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Squid Game",
+      "season": "1",
+      "year": "2021",
+      "genre": "Drama",
+      "description": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes. A survival game that has a whopping 45.6 billion-won prize at stake.",
+      "image": "https://deadline.com/wp-content/uploads/2022/08/SquidGame_Unit_103_1076.jpg?w=1024",
+      "isSeen": "unmarked",
+      "isLiked": true,
+      "id": 1675031541709,
+      "userId": 2,
+      "likedBy": [
+        3
+      ],
+      "seenBy": []
+    },
+    {
+      "name": "Stranger Things",
+      "season": "3",
+      "year": "2019",
+      "genre": "Science fiction",
+      "description": "Mysteries unravel in a small Midwestern town in the 1980s, involving supernatural forces, secret experiments and one strange girl.",
+      "image": "https://www.journaldugeek.com/content/uploads/2022/07/jdg6.jpg",
+      "isSeen": "marked",
+      "isLiked": false,
+      "id": 1675031769284,
+      "userId": 2,
       "likedBy": [],
+      "seenBy": [
+        4
+      ]
+    },
+    {
+      "name": "Sexify",
+      "season": "1",
+      "year": "2021",
+      "genre": "Sex Comedy",
+      "description": "To build an innovative sex app and win a tech competition, a sexually inexperienced student and her friends must explore the daunting world of intimacy.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSozZ4-evWREBNqlbn8gYgFHA6jOuJBixGolQ&usqp=CAU",
+      "isSeen": "unmarked",
+      "isLiked": true,
+      "id": 1675032190749,
+      "userId": 3,
+      "likedBy": [
+        4
+      ],
       "seenBy": []
     }
   ],
