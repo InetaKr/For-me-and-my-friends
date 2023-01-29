@@ -13,6 +13,8 @@ const Series = () => {
 
   return (
     <>
+    <h1>Recommendations</h1>
+    <div className="seriesCardsWrapper">
       {
        availableSeries.map((singleSeries, index) => 
        <SingleSeries 
@@ -21,6 +23,7 @@ const Series = () => {
        />  
      )
       }
+      </div>
     </>
   );
 }

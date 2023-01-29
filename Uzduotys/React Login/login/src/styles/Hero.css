@@ -1,0 +1,57 @@
+.heroContent{
+    background-image: url('https://miro.medium.com/max/1400/1*NcPxtNCUegVpoMZ3kbVh8Q.jpeg');
+    height: 100vh;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+}
+
+.heroContent h1{
+    text-align: center;
+      font-size: 2.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.6rem;
+      opacity: 0.7;
+      padding-top: 180px; 
+      text-shadow: 7px 5px 4px #C20000;
+  }
+  .heroContent p{
+    text-align: center;
+      font-size: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.6rem;
+      opacity: 0.7;
+      text-shadow: 7px 5px 4px #C20000;
+        
+  }
+  
+  .heroContent span{
+    color: red;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  .heroContent button{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 150px;
+    height: 50px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+     
+  }
+  
+  .heroContent button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    scale: 1.2;
+  }

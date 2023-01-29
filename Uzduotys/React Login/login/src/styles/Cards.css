@@ -1,0 +1,183 @@
+
+.series-info img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 7px 5px 4px #C20000;
+  }
+  .series-info span {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-shadow: 7px 5px 4px #C20000;
+  }
+
+
+  .seriesCardsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content:space-evenly;
+    margin-top: 80px;
+ 
+}
+
+.seriesCards{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    text-align: center;
+    opacity: 0.7;
+}
+.seriesCards:hover{
+  cursor: pointer;
+  box-shadow:  0 10px 12px 0 rgba(232, 29, 29, 0.2), 0 10px 24px 0 rgba(232, 16, 16, 0.19);
+  scale: 1.1;
+  opacity: 1;
+   
+}
+
+.seriesCardDataInfo img {
+    width: 100%;
+  height: 320px
+}
+.seriesCardDataInfo h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 7px 5px 4px #C20000;
+}
+.seriesCardDataInfo p {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 2px;      
+}
+.seriesCardDataInfo span {
+    font-size: 1.3rem;
+    color: #C20000;      
+}
+
+.ownerButtons {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.ownerButtons button{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 60%;
+    height: 40px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+    
+}
+
+.ownerButtons button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+.ownerButtons a{
+    text-decoration: none;
+    color: red;
+   
+}
+.ownerButtons a:hover{
+    color: white;
+   
+}
+
+.ownerInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: red;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(240, 78, 78);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .likeSeenWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+  .likeButton{
+    background-color: #C20000;
+    width: 50px;
+    height: 28px;
+  }
+  .likeButton:hover{
+    cursor: pointer;
+    scale: 1.3;
+  }
+  .likeButton i.fa-heart {
+    color: white;
+  }
+  .likeButton i.fa-heart-o {
+    color: white;
+  }

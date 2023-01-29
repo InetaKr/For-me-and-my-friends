@@ -16,43 +16,61 @@ const SingleSeries = ({ data }) => {
   console.log(seriesPostOwner)
 
   return (
-    <div style={{border:'3px solid black'}}>
+    <div className="seriesCards">
+      <div className="ownerInfo">
       {seriesPostOwner && 
         <>
+        <div className="series-info">
           <img
             src={seriesPostOwner.avatar}
-            alt="user avatar"
-            style={{width:'30px', height:'auto'}}
+            alt="user avatar" 
           />
           <span>{seriesPostOwner.userName}</span>
+          </div>
         </>
       }
+      
       {
         loggedInUser && loggedInUser.id === seriesPostOwner.id &&
         <>
+        <div className="ownerButtons">
           <button onClick={() => deleteSeries(data.id)}>Delete</button>
           <button><Link to={`/editSeries/${data.id}`}>Edit</Link></button>
+        </div>  
         </>
       }
-      <hr />
+      </div>
+      <br/>
+      <div className="seriesCardDataInfo">
+        <>
       <img src={data.image} alt={data.name} />
-      <h1>{data.name}</h1>
+      <h2>{data.name}</h2>
       <p><span>Season:</span> Season {data.season}</p>
       <p><span>Year:</span> {data.year}</p>
       <p><span>Genre:</span> {data.genre}</p>
-      <p><span>Description:</span>{data.description}</p>
-
+      <p>{data.description}</p>
+      </>
+      </div>
+      <div className="likeSeenWrapper">
         {loggedInUser &&
         <>
-      <p><span>Seen:</span> <input type="checkbox" checked={data.isSeen === 'marked'} onChange={() => handleMark(data.id)} /></p>
-      <button onClick={() => handleLike(data.id)}>
+       <label className="switch"> 
+      <input type="checkbox" checked={data.isSeen === 'marked'} onChange={() => handleMark(data.id)} />
+      <span className="slider round"></span>
+      </label>
+      <button onClick={() => handleLike(data.id)} className="likeButton">
   {data.isLiked ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}
 </button>
-</>
-}
 
+</>
+
+
+
+}
+</div>
 
     </div>
+    
   );
 
 }

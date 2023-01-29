@@ -45,13 +45,16 @@ const SignUp = () => {
 
     return(
         <>
+        
         <Formik
            initialValues={values}
            validationSchema={validate}
            onSubmit={onSubmit}
         >
+            
             {({errors, touched, values, setValues}) =>(
-                <Form>
+                
+                <Form className="SignUp-form">
                     <div className="wrapper">
                         <label >
                             Username 
@@ -131,9 +134,10 @@ const SignUp = () => {
                     </div>
                     <button type="submit">Submit</button>
                 </Form>
+            
             )}
-
         </Formik>
+        
         </>
     )
 }

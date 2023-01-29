@@ -1,0 +1,127 @@
+nav{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(31, 30, 30);
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.linkWrapper{
+    display: flex;
+    gap: 40px;
+
+}
+
+  .navBarWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .navBarWrapper a{
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.7;
+    text-shadow: 7px 5px 4px #C20000;
+  }
+  .navBarWrapper a:hover {
+    cursor: pointer;
+    color: red;
+    
+}
+  
+.loginRegister{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 50px; 
+    
+}
+
+.loginRegister a {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.7;
+    text-shadow: 7px 5px 4px #C20000;
+}
+.loginRegister a:hover {
+    cursor: pointer;
+    color: red;
+    
+}
+
+.logo img {
+    height: 100px;
+    margin-top: 20px;  
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.userInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.userInfo img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 7px 5px 4px #C20000;
+  }
+.userInfo span {
+    font-size: 1.5rem;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-shadow: 7px 5px 4px #C20000;
+  }
+.userInfo button{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    width: 150px;
+    height: 50px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+    text-transform: uppercase;
+}  
+.userInfo button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}  
+
+
+

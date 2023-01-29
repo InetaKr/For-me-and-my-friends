@@ -22,22 +22,28 @@ const UserPage = () => {
     {loggedInUser && loggedInUser.level === 'admin'  && <AdminPage/>}
     </div>
     <div>
-      <h1>Your Recomendations</h1>
+      <h1>Your Recommendations</h1>
+      <div className="seriesCardsWrapper">
       <UserPostedSeries />
+      </div>
       <h1>Your liked series</h1>
+      <div className="seriesCardsWrapper">
       {likedSeries.map((singleSeries, index) => 
        <SingleSeries 
          key={singleSeries.id || index}
          data={singleSeries}
        />  
      )}
+     </div>
       <h1>Your seen series</h1>
+      <div className="seriesCardsWrapper">
       {seenSeries.map((singleSeries, index) => 
        <SingleSeries 
          key={singleSeries.id || index}
          data={singleSeries}
        />  
      )}
+     </div>
       </div>  
     </>
   );

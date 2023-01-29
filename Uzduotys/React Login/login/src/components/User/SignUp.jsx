@@ -73,14 +73,21 @@ const Register = () => {
 
   return (
     <>
+    
     <Formik 
       initialValues={formInputs}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       {({ values, errors, touched, setValues }) => (
-        <Form>
-     
+        <Form >
+          <div className="background">
+        <div className="shape"></div>
+        <div className="shape"></div>
+    </div>
+    <div className="SignUp-form">
+      <h3>Sign Up</h3>
+    <div className="wrapper">
         <label>
           User name:
           <Field
@@ -95,8 +102,9 @@ const Register = () => {
             : null
            }
         </label>
+        </div>
 
-
+        <div className="wrapper">
         <label>
         Password:
           <Field
@@ -110,7 +118,8 @@ const Register = () => {
             : null
           }
         </label>
-
+        </div>
+        <div className="wrapper">
         <label>
           Confirm Password:
           <Field
@@ -123,6 +132,8 @@ const Register = () => {
            : null
           }
         </label>
+        </div>
+        <div className="wrapper">
         <label>
           User Avatar:
           <Field
@@ -133,11 +144,13 @@ const Register = () => {
             <span>{errors.avatar}</span>
           ) : null}
         </label>
-        <input type="submit" value="Register" />
-      
+        </div>
+        <input type="submit" value="SignUp" />
+        </div>
       </Form>
       )}
 </Formik> 
+
     </>
 
   );

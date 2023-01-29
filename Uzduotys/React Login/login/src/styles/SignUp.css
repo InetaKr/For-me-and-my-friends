@@ -1,0 +1,100 @@
+.background{
+    width: 430px;
+    height: 420px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #a13630,
+        #88190a
+    );
+    left: -120px;
+    top: -100px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #908685,
+        #242322
+    );
+    right: -100px;
+    bottom: -250px;
+}
+
+.SignUp-form {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	height: 80%;
+	padding: 80px 40px;
+	background: rgba(0, 0, 0, 0.8);
+    box-shadow: 7px 5px 4px #C20000;
+	transform: translate(-50%,-50%);
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+    margin-top: 100px;
+}
+
+.SignUp-form h3{
+    margin: 0;
+	padding: 0 0 20px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 7px 5px 4px #C20000;
+    font-size: 2rem;
+  }
+  
+.SignUp-form label{
+    margin: 0;
+	padding: 0;
+	font-weight: bold;
+    font-size: 1.5rem;
+  }
+.SignUp-form input{
+    width: 100%;
+	margin-bottom: 20px;
+  }
+
+  .SignUp-form input[type=text], .SignUp-form input[type=password], .SignUp-form input[type=url] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 60px;
+	color: #fff;
+	font-size: 20px;
+}
+  
+input[type=submit] {
+	height: 60px;
+	color: #fff;
+	font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+	background: transparent;
+	border-radius: 25px;
+    border: 2px solid red;
+	outline: none;
+	margin-top: 15%;
+}
+input[type=submit]:hover {
+	cursor: pointer;
+    background-color: red;
+    
+}
+   .wrapper span{
+    color: #ff512f;
+  } 

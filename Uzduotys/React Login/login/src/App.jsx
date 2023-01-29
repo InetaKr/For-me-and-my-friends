@@ -1,33 +1,34 @@
 import './styles/App.css';
 import Header from './components/PageParts/Header';
-import Main from './components/PageParts/Main';
-import Register from './components/User/Register';
-import Login from './components/User/Login';
+import SignUp from './components/User/SignUp';
+import SignIn from './components/User/SignIn';
 import UserPage from './components/User/UserPage';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import NewSeriesForm from './components/Series/NewSeriesForm';
 import EditSeriesForm from './components/Series/EditSeriesForm';
+import Main from './components/PageParts/Main'
+import Hero from './components/PageParts/Hero'
 
 
 
 const App = () => {
+  const location = useLocation();
+
   return (
     <>
-     <Routes>
-        <Route element={<Header />}>
-        <Route path="/" element={<Main />}/>
-        <Route path="/user" element={<UserPage />}/>
-        <Route path="/newSeries" element={<NewSeriesForm />}/>
-        <Route path="/editSeries/:id" element={<EditSeriesForm />}/>
-        </Route>
-        
-
-        <Route path="/register" element={<Register />}/>
-        <Route path="/login" element={<Login />}/>
+      <Header />
+      {location.pathname === '/' ? <Hero /> : null}
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/user" element={<UserPage />} />
+        <Route path="/newSeries" element={<NewSeriesForm />} />
+        <Route path="/editSeries/:id" element={<EditSeriesForm />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/signIn" element={<SignIn />} />
       </Routes>
-    
     </>
   );
 }
+
 
 export default App;

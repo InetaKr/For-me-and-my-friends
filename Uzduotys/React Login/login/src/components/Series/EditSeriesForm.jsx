@@ -34,7 +34,13 @@ const EditSeriesForm = () => {
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <div className="background">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+    </div>
+    <form onSubmit={handleSubmit} className='Edit-form'>
+      <h2>Edit Series</h2>
       <label>
           Image:
           <input type="text" name="image"

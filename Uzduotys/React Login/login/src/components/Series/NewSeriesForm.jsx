@@ -44,7 +44,13 @@ const NewSeriesForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <div className="background">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+    </div>
+      <form onSubmit={handleSubmit} className="Add-form">
+        <h2>Add Series</h2>
         <label>
           Image:
           <input type="text" name="image"
@@ -82,6 +88,7 @@ const NewSeriesForm = () => {
         </label>
         <label>
           Description:
+          <br />
           <textarea type="text" name="description"
             value={formInputs.description}
             onChange={(e) => setFormInputs({...formInputs, description:e.target.value})}

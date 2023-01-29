@@ -7,13 +7,11 @@
       "genre": "Sciences Fiction",
       "description": "The Witcher is a fantasy drama web television series created by Lauren Schmidt Hissrich for Netflix. It is based on the book series of the same name by Polish writer Andrzej Sapkowski. The Witcher follows the story of Geralt of Rivia, a solitary monster hunter, who struggles to find his place in a world where people often prove more wicked than monsters and beasts. But when destiny hurtles him toward a powerful sorceress, and a young princess with a special gift, the three must learn to navigate independently the increasingly volatile Continent.",
       "isSeen": "unmarked",
-      "isLiked": true,
+      "isLiked": false,
       "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
       "id": 1,
       "userId": 1,
-      "likedBy": [
-        1
-      ],
+      "likedBy": [],
       "seenBy": []
     },
     {
@@ -22,14 +20,12 @@
       "year": "2022",
       "genre": "Horrow Comedy",
       "description": "Wednesday is an American comedy horror television series based upon the character Wednesday Addams from The Addams Family. It was created by Alfred Gough, Miles Millar and Tim Burton for Netflix. It stars Jenna Ortega as the titular character, with Catherine Zeta-Jones, Luis Guzmán, Isaac Ordonez, and Fred Armisen appearing in supporting roles. The series premiered on Netflix on November 23, 2022.",
-      "isSeen": false,
-      "isLiked": true,
+      "isSeen": "unmarked",
+      "isLiked": false,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShN5Pyz-hrmvH5IbBUQiWryvOcTXFoPqALNQ&usqp=CAU",
       "id": 2,
       "userId": 3,
-      "likedBy": [
-        2
-      ],
+      "likedBy": [],
       "seenBy": []
     },
     {
@@ -38,14 +34,12 @@
       "year": "2022",
       "genre": "Thriller",
       "description": "The story of Jeffrey Dahmer, one of America's most notorious serial killers, partly told from the point of view of his victims. The series dives into the police incompetence and apathy that allowed the Wisconsin native to go on a multiyear killing spree. It dramatizes multiple instances where Dahmer was almost apprehended, but ultimately let go. Dahmer was a cleancut guy, who was repeatedly given a free pass by cops, as well as by judges, who were lenient when he had been charged with crimes.",
-      "isSeen": false,
-      "isLiked": true,
+      "isSeen": "unmarked",
+      "isLiked": false,
       "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/DAHMER_Evan-Peters_mugshot.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
       "id": 3,
       "userId": 5,
-      "likedBy": [
-        1
-      ],
+      "likedBy": [],
       "seenBy": []
     },
     {
@@ -55,13 +49,11 @@
       "genre": "kazkas2dd",
       "description": "cadscdwcawcawcadscsacasccdcvdwcdecewcwedcdecdec",
       "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
-      "isSeen": false,
-      "isLiked": true,
+      "isSeen": "unmarked",
+      "isLiked": false,
       "id": 1674851753524,
       "userId": 1,
-      "likedBy": [
-        2
-      ],
+      "likedBy": [],
       "seenBy": []
     },
     {
@@ -85,13 +77,11 @@
       "genre": "detektyvas",
       "description": "cwrwvwvcwevwevwevcevwevwevwedvwdev",
       "image": "https://allaboutcats.com/wp-content/uploads/2020/10/Sphynx-Cat-compressed.jpg",
-      "isSeen": false,
-      "isLiked": true,
+      "isSeen": "unmarked",
+      "isLiked": false,
       "id": 1674959698460,
       "userId": 2,
-      "likedBy": [
-        1
-      ],
+      "likedBy": [],
       "seenBy": []
     }
   ],
@@ -135,6 +125,15 @@
       "password": "belekas",
       "avatar": "https://media.istockphoto.com/id/1217805856/vector/small-lizard.jpg?s=170667a&w=0&k=20&c=wFRErT0e6-OoGx8b7THSdlzf54QNHsmmcPubWh-UMKM=",
       "id": 5
+    },
+    {
+      "userName": "LukasChillShark",
+      "password": "InetaKr1",
+      "confirmPassword": "InetaKr1",
+      "avatar": "https://img.freepik.com/premium-vector/cool-shark-eating-doughnut-cartoon_145832-404.jpg?w=2000",
+      "id": 1675025316125,
+      "level": "user",
+      "isBanned": false
     }
   ]
 }

@@ -1,0 +1,52 @@
+.UsersListCard img{
+    width: 80px;
+    height: 80px;
+    border: 2px solid red;
+    border-radius: 50%;
+    margin-left: 20px;
+    box-shadow: 7px 5px 4px #C20000;
+}
+
+.UserListWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+
+}
+
+.UsersListCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: black;
+    width: 600px;
+    height: 130px;
+    box-shadow: 7px 5px 4px #C20000;
+}
+.UsersListCard span{
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-shadow: 7px 5px 4px #C20000;
+}
+
+.UsersListCard button{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 40%;
+    height: 40px;
+    color: red;
+    background-color: transparent;
+    border: 2px solid red;
+    margin-right: 20px;
+}

@@ -3,14 +3,14 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-const Login = () => {
+const Singin = () => {
   const [formInputs, setFormInputs] = useState({
     userName: '',
     password: '',
   });
-  const [invalidCredentials, setInvalidCredentials] = useState(false);
+
   const [userIsBanned, setUserIsBanned] = useState(false);
-  const navigation = useNavigate();
+  const navigate = useNavigate();
 
 
   const { users, setLoggedInUser } = useContext(UserContext);
@@ -22,16 +22,20 @@ const Login = () => {
 
     if(!loggedInUser.isBanned){
       setLoggedInUser(loggedInUser);
-      navigation('/');
+      navigate('/');
     } else if(loggedInUser.isBanned){
       setUserIsBanned(true);
-    } else {
-      setInvalidCredentials(true);
-    }
+    } 
   }
 
   return (
     <>
+    <div className="background">
+        <div className="shape"></div>
+        <div className="shape"></div>
+    </div>
+    <div className="SignIn-form">
+      <h2>Sign In</h2>
       <form onSubmit={handleSubmit}>
         <label>
           User name:
@@ -48,14 +52,11 @@ const Login = () => {
         <input type="submit" value="Login" />
       </form>
       {
-        invalidCredentials && <span>Invalid username or password.</span>
-      }
-      {
     userIsBanned && <span>Your account is banned.</span>
 }
-
+</div>
     </>
   );
 }
  
-export default Login;
+export default Singin;

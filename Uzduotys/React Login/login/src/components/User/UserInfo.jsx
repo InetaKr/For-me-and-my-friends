@@ -16,21 +16,21 @@ const UserInfo = () => {
   }
 
   return (
-    <div style={{display:'flex', justifyContent:'space-between'}}>
-      <div style={{display:'flex', justifyContent:'flex-start'}}>
+    <div className="userInfo">
+      <div >
       
         {loggedInUser && (
           <img
             src={loggedInUser.avatar}
             alt="user avatar"
-            style={{width:'30px', height:'auto'}}
+            
           />
         )}
         {loggedInUser && <span>{loggedInUser.userName}</span>}
       </div>
-      <div style={{display:'flex', justifyContent:'flex-end'}}>
+      <div >
         {loggedInUser && (
-          <button onClick={() => logOutUser()}>LogOut</button>
+          <button onClick={() => logOutUser()}>Log Out</button>
         )}
       </div>
     </div>
