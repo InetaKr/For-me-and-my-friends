@@ -1,12 +1,12 @@
-import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
-import Register from './components/Register';
-import Login from './components/Login';
-import UserPage from './components/UserPage';
+import './styles/App.css';
+import Header from './components/PageParts/Header';
+import Main from './components/PageParts/Main';
+import Register from './components/User/Register';
+import Login from './components/User/Login';
+import UserPage from './components/User/UserPage';
 import { Routes, Route } from 'react-router-dom';
-import NewSeriesForm from './components/NewSeriesForm';
-import EditSeriesForm from './components/EditSeriesForm';
+import NewSeriesForm from './components/Series/NewSeriesForm';
+import EditSeriesForm from './components/Series/EditSeriesForm';
 
 
 

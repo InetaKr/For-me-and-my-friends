@@ -1,6 +1,6 @@
-import UserInfo from '../components/UserInfo';
+import UserInfo from '../User/UserInfo';
 import { Link, Outlet } from 'react-router-dom';
-import UserContext from "../context/UserContext";
+import UserContext from "../../context/UserContext";
 import { useContext } from "react";
 
 

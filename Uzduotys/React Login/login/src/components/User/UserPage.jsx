@@ -1,10 +1,10 @@
-import UserPostedSeries from "./UserPostedSeries";
-import UserContext from "../context/UserContext";
-import CardContext from "../context/CardContext";
+import UserPostedSeries from "../Series/UserPostedSeries";
+import UserContext from "../../context/UserContext";
+import CardContext from "../../context/CardContext";
 
 import { useContext } from "react";
 import AdminPage from "./AdminInfo";
-import SingleSeries from "./SingleSeries";
+import SingleSeries from "../Series/SingleSeries";
 
 const UserPage = () => {
 

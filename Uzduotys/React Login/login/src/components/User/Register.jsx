@@ -1,4 +1,4 @@
-import UserContext from "../context/UserContext";
+import UserContext from "../../context/UserContext";
 import { useState, useContext } from "react";
 import { Formik, Form, Field } from "formik";
 import * as yup from 'yup';

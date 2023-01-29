@@ -1,4 +1,4 @@
-import CardContext from "../context/CardContext";
+import CardContext from "../../context/CardContext";
 import { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 

@@ -1,5 +1,5 @@
-import CardContext from "../context/CardContext";
-import UserContext from "../context/UserContext";
+import CardContext from "../../context/CardContext";
+import UserContext from "../../context/UserContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
