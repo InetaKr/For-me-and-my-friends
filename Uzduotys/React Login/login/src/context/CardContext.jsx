@@ -1,10 +1,13 @@
 import { createContext, useState,useEffect } from "react";
+import UserContext from "./UserContext"
+import { useContext } from "react";
 
 const CardContext = createContext();
 
 const CardProvider = ({ children }) => {
 
   const [series, setSeries] = useState([]);
+  const { loggedInUser } = useContext(UserContext);
 
   useEffect (() => {
     const data = async () => {
@@ -46,49 +49,46 @@ const CardProvider = ({ children }) => {
 })
 };
 
-const handleMark = async (id) => {
-  // handle status of whether the series is marked or not
-  const newSeries = series.map(singleSeries => {
-    if (singleSeries.id === id) {
-      return {
-        ...singleSeries,
-        isSeen: singleSeries.isSeen === 'marked' ? 'unmarked' : 'marked',
-      };
-    }
-    return singleSeries;
-  });
-  setSeries(newSeries);
-
-  // send PATCH request to server to update the "marked/unmarked" status in the JSON file
-  const updatedSeries = newSeries.find(singleSeries => singleSeries.id === id);
-  await fetch(`http://localhost:5000/series/${id}`, {
-    method: 'PATCH',
-    body: JSON.stringify({isSeen: updatedSeries.isSeen}),
-    headers: { 'Content-Type': 'application/json' },
-  });
-}
-
 const handleLike = async (id) => {
-  // handle status of whether the series is liked or not
-  const newSeries = series.map(singleSeries => {
-    if (singleSeries.id === id) {
-      return {
-        ...singleSeries,
-        isLiked: !singleSeries.isLiked,
-      };
-    }
-    return singleSeries;
-  });
-  setSeries(newSeries);
+  const updatedSeries = series.find(singleSeries => singleSeries.id === id);
+  if(!updatedSeries.likedBy.includes(loggedInUser.id)) {
+      updatedSeries.likedBy.push(loggedInUser.id);
+      updatedSeries.isLiked = true;
+  } else {
+      updatedSeries.likedBy = updatedSeries.likedBy.filter(userId => userId !== loggedInUser.id);
+      updatedSeries.isLiked = false;
+  }
 
-  // send PATCH request to server to update the "liked/unliked" status in the JSON file
-  const updatedSeries = newSeries.find(singleSeries => singleSeries.id === id);
-  await fetch(`http://localhost:5000/series/${id}`, {
-    method: 'PATCH',
-    body: JSON.stringify({isLiked: updatedSeries.isLiked}),
-    headers: { 'Content-Type': 'application/json' },
-  });
+  await updateSeries(id, updatedSeries);
 }
+
+
+
+const handleMark = async (id) => {
+  const updatedSeries = series.find(singleSeries => singleSeries.id === id);
+  if(!updatedSeries.seenBy.includes(loggedInUser.id)) {
+      updatedSeries.seenBy.push(loggedInUser.id);
+      updatedSeries.isSeen = "marked";
+  } else {
+      updatedSeries.seenBy = updatedSeries.seenBy.filter(userId => userId !== loggedInUser.id);
+      updatedSeries.isSeen = "unmarked";
+  }
+
+  await updateSeries(id, updatedSeries);
+}
+
+const resetIsLikedIsSeen = (userId) => {
+  series.forEach(singleSeries => {
+    if (!singleSeries.likedBy.includes(userId)) {
+      singleSeries.isLiked = false;
+    }
+    if (!singleSeries.seenBy.includes(userId)) {
+      singleSeries.isSeen = "unmarked";
+    }
+  });
+};
+
+
 
   return (
     <CardContext.Provider
@@ -99,7 +99,8 @@ const handleLike = async (id) => {
         deleteSeries,
         updateSeries,
         handleLike,
-        handleMark
+        handleMark,
+        resetIsLikedIsSeen
       }}
     >
       {children}

@@ -3,14 +3,18 @@ import UserContext from "../context/UserContext";
 import CardContext from "../context/CardContext";
 
 import { useContext } from "react";
-import AdminPage from "./AdminPage";
+import AdminPage from "./AdminInfo";
 import SingleSeries from "./SingleSeries";
 
 const UserPage = () => {
 
   const { loggedInUser } = useContext(UserContext);
   const { series } = useContext(CardContext);
-  const likedSeries = series.filter(singleSeries => singleSeries.isLiked && singleSeries.userId === loggedInUser.id);
+  const likedSeries = series.filter(singleSeries => singleSeries.likedBy && singleSeries.likedBy.includes(loggedInUser.id));
+  const seenSeries = series.filter(singleSeries => singleSeries.seenBy && singleSeries.seenBy.includes(loggedInUser.id));
+
+
+
 
   return (
     <>
@@ -22,6 +26,13 @@ const UserPage = () => {
       <UserPostedSeries />
       <h1>Your liked series</h1>
       {likedSeries.map((singleSeries, index) => 
+       <SingleSeries 
+         key={singleSeries.id || index}
+         data={singleSeries}
+       />  
+     )}
+      <h1>Your seen series</h1>
+      {seenSeries.map((singleSeries, index) => 
        <SingleSeries 
          key={singleSeries.id || index}
          data={singleSeries}

@@ -11,6 +11,8 @@ const SingleSeries = ({ data }) => {
 
   const seriesPostOwner = users.find(user => user.id === data.userId);
 
+
+
   console.log(seriesPostOwner)
 
   return (
@@ -39,12 +41,15 @@ const SingleSeries = ({ data }) => {
       <p><span>Year:</span> {data.year}</p>
       <p><span>Genre:</span> {data.genre}</p>
       <p><span>Description:</span>{data.description}</p>
+
+        {loggedInUser &&
+        <>
       <p><span>Seen:</span> <input type="checkbox" checked={data.isSeen === 'marked'} onChange={() => handleMark(data.id)} /></p>
       <button onClick={() => handleLike(data.id)}>
   {data.isLiked ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}
 </button>
-
-
+</>
+}
 
 
     </div>

@@ -43,6 +43,7 @@ return (
     <UserContext.Provider
     value={{
         users,
+        setUsers,
         addNewUser,
         banOrUnbanUser,
         loggedInUser,
