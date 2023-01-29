@@ -7,7 +7,7 @@
       "genre": "Sciences Fiction",
       "description": "The Witcher is a fantasy drama web television series created by Lauren Schmidt Hissrich for Netflix. It is based on the book series of the same name by Polish writer Andrzej Sapkowski. The Witcher follows the story of Geralt of Rivia, a solitary monster hunter, who struggles to find his place in a world where people often prove more wicked than monsters and beasts. But when destiny hurtles him toward a powerful sorceress, and a young princess with a special gift, the three must learn to navigate independently the increasingly volatile Continent.",
       "isSeen": "unmarked",
-      "isLiked": false,
+      "isLiked": true,
       "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
       "id": 1,
       "userId": 1
@@ -31,7 +31,7 @@
       "genre": "Thriller",
       "description": "The story of Jeffrey Dahmer, one of America's most notorious serial killers, partly told from the point of view of his victims. The series dives into the police incompetence and apathy that allowed the Wisconsin native to go on a multiyear killing spree. It dramatizes multiple instances where Dahmer was almost apprehended, but ultimately let go. Dahmer was a cleancut guy, who was repeatedly given a free pass by cops, as well as by judges, who were lenient when he had been charged with crimes.",
       "isSeen": "umarked",
-      "isLiked": false,
+      "isLiked": true,
       "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/09/DAHMER_Evan-Peters_mugshot.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
       "id": 3,
       "userId": 5
@@ -44,7 +44,7 @@
       "description": "cadscdwcawcawcadscsacasccdcvdwcdecewcwedcdecdec",
       "image": "https://netflixjunkie.com/wp-content/uploads/2021/12/the-witcher.jpg",
       "isSeen": "unmarked",
-      "isLiked": true,
+      "isLiked": false,
       "id": 1674851753524,
       "userId": 1
     },
@@ -56,7 +56,7 @@
       "description": "dewcaedcawdscwdcqdcqwdxqwdqwdqwdxwqsdxqsdxwqscqwc",
       "image": "https://i.pinimg.com/736x/65/dd/d4/65ddd4b8881cd50c9e0af5b12eebb4e5.jpg",
       "isSeen": "unmarked",
-      "isLiked": false,
+      "isLiked": true,
       "id": 1674939148992,
       "userId": 3
     }
@@ -73,7 +73,7 @@
     {
       "userName": "GiedreTotoro",
       "level": "user",
-      "isBanned": true,
+      "isBanned": false,
       "password": "belekas",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBY_4l8cvxlkEWtANeU5tt94VV8T5NO6ETQg&usqp=CAU",
       "id": 2

@@ -4,6 +4,7 @@ import UserContext from "../context/UserContext";
 import { useContext } from "react";
 
 
+
 const Header = () => {
 
   const { loggedInUser } = useContext(UserContext);
@@ -19,6 +20,11 @@ const Header = () => {
       <div className="addNewSeries">
       <Link to="/newSeries">Add New Series</Link>
     </div>
+    <div><Link to="/">HOME</Link></div>
+    <div>
+      <Link to="/user">Your Page</Link>
+    </div>
+    
     </div>
    
       ):

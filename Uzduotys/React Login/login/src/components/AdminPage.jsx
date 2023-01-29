@@ -10,6 +10,8 @@ const AdminPage = () => {
 
   return (
     <>
+    <h1>Manage users</h1>
+  
       {
         nonAdminUsers.map(user => 
           <UserAdminCard

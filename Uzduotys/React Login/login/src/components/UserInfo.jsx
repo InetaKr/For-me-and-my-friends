@@ -1,6 +1,6 @@
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const UserInfo = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
@@ -15,7 +15,7 @@ const UserInfo = () => {
   return (
     <div style={{display:'flex', justifyContent:'space-between'}}>
       <div style={{display:'flex', justifyContent:'flex-start'}}>
-      <Link to="/">HOME</Link>
+      
         {loggedInUser && (
           <img
             src={loggedInUser.avatar}
@@ -26,7 +26,6 @@ const UserInfo = () => {
         {loggedInUser && <span>{loggedInUser.userName}</span>}
       </div>
       <div style={{display:'flex', justifyContent:'flex-end'}}>
-        {loggedInUser && loggedInUser.level === 'admin' && <span>Admin</span> && <Link to="/admin">Manage Users</Link>}
         {loggedInUser && (
           <button onClick={() => logOutUser()}>LogOut</button>
         )}
