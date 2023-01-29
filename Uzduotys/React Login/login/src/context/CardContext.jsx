@@ -46,6 +46,50 @@ const CardProvider = ({ children }) => {
 })
 };
 
+const handleMark = async (id) => {
+  // handle status of whether the series is marked or not
+  const newSeries = series.map(singleSeries => {
+    if (singleSeries.id === id) {
+      return {
+        ...singleSeries,
+        isSeen: singleSeries.isSeen === 'marked' ? 'unmarked' : 'marked',
+      };
+    }
+    return singleSeries;
+  });
+  setSeries(newSeries);
+
+  // send PATCH request to server to update the "marked/unmarked" status in the JSON file
+  const updatedSeries = newSeries.find(singleSeries => singleSeries.id === id);
+  await fetch(`http://localhost:5000/series/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify({isSeen: updatedSeries.isSeen}),
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
+
+const handleLike = async (id) => {
+  // handle status of whether the series is liked or not
+  const newSeries = series.map(singleSeries => {
+    if (singleSeries.id === id) {
+      return {
+        ...singleSeries,
+        isLiked: !singleSeries.isLiked,
+      };
+    }
+    return singleSeries;
+  });
+  setSeries(newSeries);
+
+  // send PATCH request to server to update the "liked/unliked" status in the JSON file
+  const updatedSeries = newSeries.find(singleSeries => singleSeries.id === id);
+  await fetch(`http://localhost:5000/series/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify({isLiked: updatedSeries.isLiked}),
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
+
   return (
     <CardContext.Provider
       value={{
@@ -53,7 +97,9 @@ const CardProvider = ({ children }) => {
         setSeries,
         addNewSeries,
         deleteSeries,
-        updateSeries
+        updateSeries,
+        handleLike,
+        handleMark
       }}
     >
       {children}
