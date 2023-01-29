@@ -50,3 +50,8 @@
     border: 2px solid red;
     margin-right: 20px;
 }
+.UsersListCard button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}

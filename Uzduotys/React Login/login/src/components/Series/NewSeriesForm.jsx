@@ -33,7 +33,10 @@ const NewSeriesForm = () => {
       isSeen: "unmarked",
       isLiked: false,
       id: Date.now(),
-      userId: loggedInUser.id
+      userId: loggedInUser.id,
+      likedBy: [],
+      seenBy: []
+
     };
 
     addNewSeries(newSeries);
