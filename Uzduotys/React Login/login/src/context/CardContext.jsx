@@ -53,40 +53,24 @@ const handleLike = async (id) => {
   const updatedSeries = series.find(singleSeries => singleSeries.id === id);
   if(!updatedSeries.likedBy.includes(loggedInUser.id)) {
       updatedSeries.likedBy.push(loggedInUser.id);
-      updatedSeries.isLiked = true;
   } else {
       updatedSeries.likedBy = updatedSeries.likedBy.filter(userId => userId !== loggedInUser.id);
-      updatedSeries.isLiked = false;
   }
-
   await updateSeries(id, updatedSeries);
 }
 
 
 
-const handleMark = async (id) => {
+const handleSeen = async (id) => {
   const updatedSeries = series.find(singleSeries => singleSeries.id === id);
   if(!updatedSeries.seenBy.includes(loggedInUser.id)) {
       updatedSeries.seenBy.push(loggedInUser.id);
-      updatedSeries.isSeen = "marked";
   } else {
       updatedSeries.seenBy = updatedSeries.seenBy.filter(userId => userId !== loggedInUser.id);
-      updatedSeries.isSeen = "unmarked";
   }
 
   await updateSeries(id, updatedSeries);
 }
-
-const resetIsLikedIsSeen = (userId) => {
-  series.forEach(singleSeries => {
-    if (!singleSeries.likedBy.includes(userId)) {
-      singleSeries.isLiked = false;
-    }
-    if (!singleSeries.seenBy.includes(userId)) {
-      singleSeries.isSeen = "unmarked";
-    }
-  });
-};
 
 
 
@@ -99,8 +83,7 @@ const resetIsLikedIsSeen = (userId) => {
         deleteSeries,
         updateSeries,
         handleLike,
-        handleMark,
-        resetIsLikedIsSeen
+        handleSeen
       }}
     >
       {children}

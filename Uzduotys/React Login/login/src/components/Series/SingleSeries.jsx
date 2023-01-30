@@ -6,14 +6,9 @@ import { Link } from "react-router-dom";
 const SingleSeries = ({ data }) => {
 
   const { users, loggedInUser } = useContext(UserContext);
-  const { deleteSeries, handleLike, handleMark } = useContext(CardContext);
-  
+  const { deleteSeries, handleLike, handleSeen } = useContext(CardContext);
 
   const seriesPostOwner = users.find(user => user.id === data.userId);
-
-
-
-  console.log(seriesPostOwner)
 
   return (
     <div className="seriesCards">
@@ -55,17 +50,15 @@ const SingleSeries = ({ data }) => {
         {loggedInUser &&
         <>
        <label className="switch"> 
-      <input type="checkbox" checked={data.isSeen === 'marked'} onChange={() => handleMark(data.id)} />
+      <input type="checkbox" checked={data.seenBy.includes(loggedInUser.id)} onChange={() => handleSeen(data.id)} />
       <span className="slider round"></span>
       </label>
       <button onClick={() => handleLike(data.id)} className="likeButton">
-  {data.isLiked ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}
+  {data.likedBy.includes(loggedInUser.id) ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}
 </button>
 
+
 </>
-
-
-
 }
 </div>
 

@@ -1,17 +1,14 @@
 import UserContext from "../../context/UserContext";
-import CardContext from "../../context/CardContext";
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 
 const UserInfo = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
-  const { resetIsLikedIsSeen } = useContext(CardContext)
 
   const navigation = useNavigate();
 
   const logOutUser = () => {
     setLoggedInUser(null);
-    resetIsLikedIsSeen();
     navigation('/');
   }
 

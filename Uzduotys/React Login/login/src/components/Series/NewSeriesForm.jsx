@@ -30,13 +30,10 @@ const NewSeriesForm = () => {
       genre: formInputs.genre,
       description: formInputs.description,
       image: formInputs.image,
-      isSeen: "unmarked",
-      isLiked: false,
       id: Date.now(),
       userId: loggedInUser.id,
       likedBy: [],
       seenBy: []
-
     };
 
     addNewSeries(newSeries);
