@@ -28,6 +28,9 @@ const Header = () => {
             <div>
               <Link to="/newSeries">Add</Link>
             </div>
+            <div>
+              <Link to="/chat">Chat</Link>
+            </div>
             </div>
             <UserInfo />
           </div>

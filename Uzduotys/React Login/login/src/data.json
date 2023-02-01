@@ -204,5 +204,22 @@
       "level": "user",
       "isBanned": false
     }
+  ],
+  "chat": [
+    {
+      "message": "siunciu kita zin",
+      "id": 1675259082960,
+      "userId": 2
+    },
+    {
+      "message": "siunciu kita zin",
+      "id": 1675259100301,
+      "userId": 2
+    },
+    {
+      "message": "cscsc",
+      "id": 1675259200316,
+      "userId": 1
+    }
   ]
 }

@@ -8,6 +8,8 @@ import NewSeriesForm from './components/Series/NewSeriesForm';
 import EditSeriesForm from './components/Series/EditSeriesForm';
 import Main from './components/PageParts/Main'
 import Hero from './components/PageParts/Hero'
+import ChatPage from './components/Chat/ChatPage';
+
 
 
 
@@ -25,6 +27,7 @@ const App = () => {
         <Route path="/editSeries/:id" element={<EditSeriesForm />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/signIn" element={<SignIn />} />
+        <Route path= "/chat" element ={< ChatPage />} />
       </Routes>
     </>
   );

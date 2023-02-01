@@ -8,6 +8,8 @@ const UserProvider = ({ children }) => {
 
     const [users, setUsers] = useState ([]);
 
+    
+
 
 
     useEffect (() => {
@@ -45,7 +47,8 @@ return (
         addNewUser,
         banOrUnbanUser,
         loggedInUser,
-        setLoggedInUser
+        setLoggedInUser,
+        
       }}
     >
         {children}
