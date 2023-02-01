@@ -21,7 +21,7 @@ const MessageForm = () => {
             message: formInputs.message,
             id: Date.now(),
             userId: loggedInUser.id,
-            timestamp: new Date().toLocaleString
+            timestamp: new Date().toLocaleString()
         };
 
         addNewMessage(newMessage);
