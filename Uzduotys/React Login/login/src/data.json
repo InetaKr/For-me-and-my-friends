@@ -210,19 +210,29 @@
       "message": "siunciu kita zin",
       "id": 1675259082960,
       "userId": 2,
-      "timestamp": "2/2/2023, 2:27:25 AM"
+      "timestamp": "2/2/2023, 2:27:25 AM",
+      "isEdited": false
     },
     {
       "message": "siunciu kita zin",
       "id": 1675259100301,
       "userId": 2,
-      "timestamp": "2/2/2023, 2:27:25 AM"
+      "timestamp": "2/2/2023, 2:27:25 AM",
+      "isEdited": false
     },
     {
-      "message": "sxsx",
+      "message": "naujas zin vel bandau",
       "id": 1675304866740,
       "userId": 1,
-      "timestamp": "2/2/2023, 4:27:46 AM"
+      "timestamp": "2/2/2023, 5:31:42 AM",
+      "isEdited": true
+    },
+    {
+      "message": "aha veikia editinu",
+      "id": 1675308802470,
+      "userId": 3,
+      "timestamp": "2/2/2023, 5:34:34 AM",
+      "isEdited": true
     }
   ]
 }

@@ -21,10 +21,12 @@ const MessageForm = () => {
             message: formInputs.message,
             id: Date.now(),
             userId: loggedInUser.id,
-            timestamp: new Date().toLocaleString()
+            timestamp: new Date().toLocaleString(),
+            isEdited: false
         };
 
         addNewMessage(newMessage);
+        setFormInputs({ message: "" });
         navigation()
     }
     return(

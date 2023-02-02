@@ -2,7 +2,7 @@ import { useState} from "react";
 
 const EditMessage = ({ chatData, setIsEditing, onUpdate }) => {
   const [formInputs, setFormInputs] = useState({
-    message: chatData.message
+    message: chatData.message,
   });
 
   const handleSubmit = event => {

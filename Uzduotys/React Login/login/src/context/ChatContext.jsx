@@ -43,7 +43,8 @@ const ChatProvider = ({children}) => {
       }).then(res => {
         console.log(res);
         if(res.ok){
-            setChatMessages(chatMessages.map(message => message.id === id ? {...message, ...updatedMessage} : message));
+            setChatMessages(chatMessages.map(message => message.id === id ? {...message, message: updatedMessage.message, ...updatedMessage} : message));
+
       }
     })
     };
