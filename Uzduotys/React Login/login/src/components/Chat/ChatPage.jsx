@@ -1,5 +1,3 @@
-
-
 import MessageForm from "./MessageForm";
 import Messages from "./Messages";
 

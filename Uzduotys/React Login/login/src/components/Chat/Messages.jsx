@@ -5,12 +5,12 @@ import Message from "./Message";
 
 const Messages = () => {
 
-    const { chatMessage } = useContext(ChatContext);
+    const { chatMessages } = useContext(ChatContext);
     const { users } = useContext(UserContext);
 
 
     const bannedUsers = users.map(user => user.isBanned && user.id).filter(item => item !== false);
-    const availableMessages = chatMessage.filter(message => !bannedUsers.includes(message.userId));
+    const availableMessages = chatMessages.filter(message => !bannedUsers.includes(message.userId));
 
     return (
         <>

@@ -4,13 +4,13 @@ const ChatContext = createContext();
 
 const ChatProvider = ({children}) => {
 
-    const [chatMessage, setChatMessage] = useState([]);
+    const [chatMessages, setChatMessages] = useState([]);
     
     useEffect(() => {
         const chatData = async () => {
             const res = await fetch("http://localhost:5000/chat");
             const chatData = await res.json();
-            setChatMessage(chatData);
+            setChatMessages(chatData);
         };
         chatData();
     }, []);
@@ -21,7 +21,7 @@ const ChatProvider = ({children}) => {
             body: JSON.stringify(newMessage),
             headers: { "Content-Type": "application/json"},
         }).then (res => res.json())
-        .then(chatData => setChatMessage([...chatMessage,chatData]));
+        .then(chatData => setChatMessages([...chatMessages,chatData]));
     }
 
     const deleteMessage = async (id) =>{
@@ -29,19 +29,21 @@ const ChatProvider = ({children}) => {
             method: "DELETE",
         }).then(res => {
             if(res.ok){
-                setChatMessage(chatMessage.filter(message => message.id !==id))
+                setChatMessages(chatMessages.filter(message => message.id !==id))
             }
         })
     };
 
     const updateMessage =  async (id, updatedMessage) => {
+        console.log("id:", id);
         await fetch(`http://localhost:5000/chat/${id}`, {
         method: 'PATCH',
         body: JSON.stringify(updatedMessage),
         headers: { 'Content-Type': 'application/json' },
       }).then(res => {
+        console.log(res);
         if(res.ok){
-            setChatMessage(chatMessage.map(message => message.id === id ? {...message, ...updatedMessage} : message));
+            setChatMessages(chatMessages.map(message => message.id === id ? {...message, ...updatedMessage} : message));
       }
     })
     };
@@ -55,7 +57,7 @@ const ChatProvider = ({children}) => {
             addNewMessage,
             deleteMessage,
             updateMessage,
-            chatMessage
+            chatMessages
 
           }}
         
